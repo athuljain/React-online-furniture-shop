@@ -1,9 +1,11 @@
-import React,{useState} from "react"
+import React,{useState, useContext} from "react"
 import { useNavigate } from "react-router-dom"
+import UserContext from "./UserContext"
 
 
 export default function UserRegister(){
         const navigate=useNavigate()
+        const {addUser}=useContext(UserContext)
 
         const [name,setName]=useState("")
         const [phone,setPhone]=useState("")
