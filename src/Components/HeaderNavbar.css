@@ -93,5 +93,39 @@
   margin-right: 20px;
 }
 
+.service-text {
+  position: relative;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.dropdown-list {
+  align-items: flex-start;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  width: 500px;
+}
+
+.service-text:hover .dropdown-list {
+  display: block;
+}
+
+.dropdown-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-list li {
+  padding: 5px 0;
+  color: #000;
+}
+
+
 
   

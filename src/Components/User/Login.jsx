@@ -1,17 +1,27 @@
 import React,{useState,useContext} from "react"
-import { Link } from "react-router-dom"
+import { Link  } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 import UserContext from "./UserContext"
 
 export default function Login(){
+    const navigate=useNavigate()
 
     const {getUserByEmail}=useContext(UserContext)
     const [email,setEmail] = useState('')
     const [password,setPassword]=useState('')
+
+    console.log(email);
+    console.log(password);
+
+    
     const handleButtonClick=()=>{
         const user=getUserByEmail(email)
+        console.log(user);
 
-        if (user&&user.password===password){
+        if (user && user.password===password){
+
+            navigate('/')
             console.log("Login Success");
         }else{
             console.log("login failed");

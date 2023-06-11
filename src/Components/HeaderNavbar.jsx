@@ -4,6 +4,8 @@ import "../Components/HeaderNavbar.css";
 import { BsMinecart } from "react-icons/bs";
 import { GiSelfLove } from "react-icons/gi";
 import { AiOutlineUser } from "react-icons/ai";
+import { Link } from 'react-router-dom';
+
 
 function HeaderNavbar() {
   return (
@@ -24,57 +26,77 @@ function HeaderNavbar() {
           </div>
 
           <div className="right-section">
-            <a className="login-logo" href="/login">
-              <AiOutlineUser />
-            </a>
+          <Link className="login-logo" to="/login">
+  <AiOutlineUser />
+</Link>
 
-            <a className="wishlist-logo" href="/wishlist">
+            <a className="wishlist-logo" href="/">
               <GiSelfLove />
             </a>
 
-            <a className="cart-logo" href="/cart">
+            <a className="cart-logo" href="/">
               <BsMinecart />
             </a>
           </div>
         </div>
 
         <div className="navbar-second-line">
-           <a className="link-text" href="/studio">
+           <a className="link-text" href="/">
              Find a Studio
            </a>
-           <a className="link-text" href="/order">
+           <a className="link-text" href="/">
             Track Your Order
            </a>
-           <a className="link-text" href="/bulk">
+           <a className="link-text" href="/">
              Buy in Bulk
            </a>
-           <a className="link-text" href="/contact">
+           <a className="link-text" href="/">
              Contact Us
            </a>
          </div>
 
-          <div className="thrid-nav" >
-         <div className="navbar-thrid-line"  >
-           <a className="service-text" href="/furniture">
-             Furniture
-           </a>
-           <a className="service-text" href="/homedecor">
-            Home Decor
-           </a>
-           <a className="service-text" href="/kitchen">
-             Kitchen & Dining
-           </a>
-           <a className="service-text" href="/lamps">
-             Lamps & Lighting
-           </a>
-           <a className="service-text" href="/Home">
-             Home Utility
-           </a>
-           <a className="service-text" href="/modular">
-             Modular
-           </a>
-         </div>
-         </div>
+         <div className="thrid-nav">
+  <div className="navbar-thrid-line">
+    <a className="service-text" href="/">
+      Furniture
+      <div className="dropdown-list">
+        <ul>
+          <li>Sofa</li>
+          <li>Table</li>
+          <li>Chair</li>
+        </ul>
+      </div>
+    </a>
+    <a className="service-text" href="/">
+      Home Decor
+      <div className="dropdown-list">
+        <ul>
+          <li>Photoframe</li>
+          <li>Wall Art</li>
+        </ul>
+      </div>
+    </a>
+    <a className="service-text" href="/">
+      Kitchen & Dining
+      <div className="dropdown-list">
+        <ul>
+          <li>Dinnerware</li>
+          <li>Cakeware</li>
+        </ul>
+      </div>
+    </a>
+    <a className="service-text" href="/">
+      Lamps & Lighting
+    </a>
+    <a className="service-text" href="/">
+      Home Utility
+    </a>
+    <a className="service-text" href="/">
+      Modular
+    </a>
+  </div>
+</div>
+
 
       </Container>
     </Navbar>
@@ -82,6 +104,3 @@ function HeaderNavbar() {
 }
 
 export default HeaderNavbar;
-
-
-

@@ -18,7 +18,7 @@ export default function UserRegister(){
             const userData={
                 name,phone,email,password 
             }
-            
+            addUser(userData)
             navigate('/login')
             console.log(userData);
         }

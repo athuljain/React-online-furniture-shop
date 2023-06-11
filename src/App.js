@@ -1,4 +1,3 @@
-
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Components/User/Login';
@@ -8,16 +7,13 @@ import HeaderNavbar from './Components/HeaderNavbar';
 function App() {
   return (
     <div className="App">
-      < HeaderNavbar />
-
       <Router>
-
+        <HeaderNavbar />
         <Routes>
-          <Route path="/login" element={Login} />
-          <Route path='/register' element={UserRegister} />
+          <Route path="/login" element={<Login />} />
+          <Route path='/register' element={<UserRegister />} />
         </Routes>
       </Router>
-
     </div>
   );
 }
