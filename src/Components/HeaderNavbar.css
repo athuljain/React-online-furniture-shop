@@ -1,0 +1,97 @@
+.Nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.input-Search {
+  margin-right: 10px;
+}
+
+.center-section {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.right-section {
+  display: flex;
+  margin-right:10px ;
+}
+
+.right-section > * {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.logo {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.login-logo,
+.wishlist-logo,
+.cart-logo {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+.navbar-second-line {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.link-text {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.link-text:hover {
+  text-decoration: none;
+}
+
+.link-text:not(:last-child) {
+  margin-right: 20px;
+}
+.navbar-third-line {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  
+  
+ 
+  
+}
+.thrid-nav{
+  margin-top: 10px;
+  background-color: black;
+  height: 30px;
+}
+
+.service-text {
+  color: rgb(243, 237, 237);
+  text-decoration: none;
+  margin: 0px 10px 15px;
+  font-weight: bold;
+  margin-top: 15px;
+  
+}
+
+.service-text:hover {
+  text-decoration: none;
+}
+
+.service-text:not(:last-child) {
+  margin-right: 20px;
+}
+
+
+  
