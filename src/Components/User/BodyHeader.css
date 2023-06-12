@@ -1,0 +1,38 @@
+.BodyHeader{
+    background-size: cover ;
+    background-repeat: no-repeat;
+    align-items: center;
+   
+}
+.HeaderImage{
+    align-items: center;
+    margin-top: 20px;
+
+}
+img{
+    
+    width: 1200px;
+    height:273px;
+}
+.ShopCategory {
+    display: flex;
+}
+
+.imageContainer {
+
+    display: flex;
+    flex-direction: column;
+    
+    margin: 0 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.imageContainer img {
+    width: 200px;
+    height: 200px;
+}
+
+.imageContainer p {
+    margin-top: 5px;
+}
