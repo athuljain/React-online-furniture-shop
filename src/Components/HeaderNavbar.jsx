@@ -77,7 +77,7 @@ function HeaderNavbar() {
       </div>
     </a>
     <a className="service-text" href="/">
-      Kitchen & Dining
+     Dining Set
       <div className="dropdown-list">
         <ul>
           <li>Dinnerware</li>

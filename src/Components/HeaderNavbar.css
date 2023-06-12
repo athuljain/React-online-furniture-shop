@@ -126,6 +126,43 @@
   color: #000;
 }
 
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-Search {
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+  width: 200px;
+  transition: border-color 0.3s ease;
+}
+
+.input-Search:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.Search-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #042241;
+  color: white;
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Search-btn:hover {
+  background-color: #0056b3;
+}
+
 
 
   
