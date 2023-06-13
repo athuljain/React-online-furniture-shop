@@ -2,13 +2,14 @@ import React from 'react';
 import './Table.css'
 import {products} from './products'
 import './Products.css'
+import { Link } from 'react-router-dom';
 import {
-    MDBCard,
+    
     MDBCardBody,
     MDBCardTitle,
     MDBCardText,
     MDBCardImage,
-    MDBBtn
+    
   } from 'mdb-react-ui-kit';
 export default function Table(){
     const filteredProducts = products.filter((product) => product.category === 'Table');
@@ -18,7 +19,7 @@ export default function Table(){
         <h1 >Table</h1>
         <div className='Table-productsList'>
         {filteredProducts.map((product) => (
-          <MDBCard key={product.id}>
+          <Link to={`/products/${product.id}`} key={product.id} className='linkWithoutDecoration' >
               <div className='Table-cardproduct'>
             <MDBCardImage className='Table-ProductsImg' src={product.image} position='top' alt='...' />
             <MDBCardBody>
@@ -28,7 +29,7 @@ export default function Table(){
              
             </MDBCardBody>
             </div>
-          </MDBCard>
+          </Link>
         ))}
         </div>
       </div>

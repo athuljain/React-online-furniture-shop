@@ -2,13 +2,14 @@ import React from 'react';
 import './Sofa.css'
 import {products} from './products'
 import './Products.css'
+import { Link } from 'react-router-dom';
 import {
-    MDBCard,
+    
     MDBCardBody,
     MDBCardTitle,
     MDBCardText,
     MDBCardImage,
-    MDBBtn
+    
   } from 'mdb-react-ui-kit';
 export default function Sofa(){
     const filteredProducts = products.filter((product) => product.category === 'Sofa');
@@ -18,7 +19,7 @@ export default function Sofa(){
         <h1 >Sofa</h1>
         <div className='Sofa-productsList'>
         {filteredProducts.map((product) => (
-          <MDBCard key={product.id}>
+          <Link to={`/products/${product.id}`} key={product.id} className='linkWithoutDecoration' >
               <div className='Sofa-cardproduct'>
             <MDBCardImage className='Sofa-ProductsImg' src={product.image} position='top' alt='...' />
             <MDBCardBody>
@@ -28,7 +29,7 @@ export default function Sofa(){
               
             </MDBCardBody>
             </div>
-          </MDBCard>
+          </Link>
         ))}
         </div>
       </div>

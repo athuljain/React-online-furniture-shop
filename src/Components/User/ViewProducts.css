@@ -1,0 +1,13 @@
+.CartBtn {
+    margin-right: 10px; 
+    height: 30px;
+    width: 150px;
+    border-radius: 4px;
+  }
+  
+  .WishListBtn {
+    margin-left: 10px; 
+    height: 30px;
+    width: 150px;
+    border-radius: 4px;
+  }

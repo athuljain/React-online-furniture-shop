@@ -9,6 +9,7 @@ import Sofa from './Components/User/Sofa';
 import Chair from './Components/User/Chair';
 import Table from './Components/User/Table';
 import ViewProduct from './Components/User/ViewProduct';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/table' element={<Table />} />
           <Route path='/products/:productId' element={< ViewProduct />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

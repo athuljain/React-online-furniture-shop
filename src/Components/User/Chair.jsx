@@ -1,14 +1,15 @@
 import React from 'react';
 import './Chair.css'
 import {products} from './products'
+import { Link } from 'react-router-dom';
 
 import {
-    MDBCard,
+    
     MDBCardBody,
     MDBCardTitle,
     MDBCardText,
     MDBCardImage,
-    MDBBtn
+    
   } from 'mdb-react-ui-kit';
 export default function Chair(){
 
@@ -21,7 +22,7 @@ export default function Chair(){
             </div>
             <div className="Chair-ProductsList">
                 {filteredProducts.map((product)=>(
-                 <MDBCard key={product.id}>
+                 <Link to={`/products/${product.id}`} key={product.id} className='linkWithoutDecoration' >
               <div className='Chair-cardproduct'>
             <MDBCardImage className='Chair-ProductsImg' src={product.image} position='top' alt='...' />
             <MDBCardBody>
@@ -31,7 +32,9 @@ export default function Chair(){
               
             </MDBCardBody>
             </div>
-          </MDBCard>
+            </Link>
+
+          
         ))}   
                 
 

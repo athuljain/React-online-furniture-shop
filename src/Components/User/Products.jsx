@@ -21,7 +21,7 @@ export default function Products(){
       <h1 >All Products</h1>
       <div className='productsList'>
       {products.map((product) => (
-        <Link to={`/products/${product.id}`} key={product.id} >
+        <Link to={`/products/${product.id}`} key={product.id} className='linkWithoutDecoration' >
         <MDBCard >
             <div className='cardproduct'>
           <MDBCardImage className='allProductsImg' src={product.image} position='top' alt='...' />

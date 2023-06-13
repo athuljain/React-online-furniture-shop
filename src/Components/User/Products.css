@@ -34,6 +34,9 @@
     color: #555;
     font-weight: bold;
   }
+  .linkWithoutDecoration{
+    text-decoration: none;
+  }
   
   .allProductscartBtn,
   .allProductsWishlistBtn {
