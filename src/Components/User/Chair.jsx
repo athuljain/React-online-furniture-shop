@@ -1,5 +1,5 @@
 import React from 'react';
-import './Table.css'
+import './Chair.css'
 import {products} from './products'
 
 import {
@@ -28,8 +28,7 @@ export default function Chair(){
               <MDBCardTitle className='Chair-ProductsTitle'>{product.title}</MDBCardTitle>
               <MDBCardText className='Chair-ProductsCategory'>{product.category}</MDBCardText>
               <MDBCardText className='Chair-ProductsPrice'>Price: {product.price}</MDBCardText>
-              <MDBBtn className='Chair-ProductscartBtn' href='#'>Add To Cart</MDBBtn>
-              <MDBBtn className='Chair-ProductsWishlistBtn' href='#'>Add To WishList</MDBBtn>
+              
             </MDBCardBody>
             </div>
           </MDBCard>

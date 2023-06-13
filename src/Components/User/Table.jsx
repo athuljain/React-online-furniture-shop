@@ -25,8 +25,7 @@ export default function Table(){
               <MDBCardTitle className='Table-ProductsTitle'>{product.title}</MDBCardTitle>
               <MDBCardText className='Table-ProductsCategory'>{product.category}</MDBCardText>
               <MDBCardText className='Table-ProductsPrice'>Price: {product.price}</MDBCardText>
-              <MDBBtn className='Table-ProductscartBtn' href='#'>Add To Cart</MDBBtn>
-              <MDBBtn className='Table-ProductsWishlistBtn' href='#'>Add To WishList</MDBBtn>
+             
             </MDBCardBody>
             </div>
           </MDBCard>

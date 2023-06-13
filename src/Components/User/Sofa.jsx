@@ -25,8 +25,7 @@ export default function Sofa(){
               <MDBCardTitle className='Sofa-ProductsTitle'>{product.title}</MDBCardTitle>
               <MDBCardText className='Sofa-ProductsCategory'>{product.category}</MDBCardText>
               <MDBCardText className='Sofa-ProductsPrice'>Price: {product.price}</MDBCardText>
-              <MDBBtn className='Sofa-ProductscartBtn' href='#'>Add To Cart</MDBBtn>
-              <MDBBtn className='Sofa-ProductsWishlistBtn' href='#'>Add To WishList</MDBBtn>
+              
             </MDBCardBody>
             </div>
           </MDBCard>

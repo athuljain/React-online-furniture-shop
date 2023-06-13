@@ -7,10 +7,12 @@ import {
     MDBCardTitle,
     MDBCardText,
     MDBCardImage,
-    MDBBtn
+    
   } from 'mdb-react-ui-kit';
+import { Link } from 'react-router-dom';
 
 console.log(products);
+
 
 export default function Products(){
     
@@ -19,18 +21,19 @@ export default function Products(){
       <h1 >All Products</h1>
       <div className='productsList'>
       {products.map((product) => (
-        <MDBCard key={product.id}>
+        <Link to={`/products/${product.id}`} key={product.id} >
+        <MDBCard >
             <div className='cardproduct'>
           <MDBCardImage className='allProductsImg' src={product.image} position='top' alt='...' />
           <MDBCardBody>
             <MDBCardTitle className='allProductsTitle'>{product.title}</MDBCardTitle>
             <MDBCardText className='allProductsCategory'>{product.category}</MDBCardText>
             <MDBCardText className='allProductsPrice'>Price: {product.price}</MDBCardText>
-            <MDBBtn className='allProductscartBtn' href='#'>Add To Cart</MDBBtn>
-            <MDBBtn className='allProductsWishlistBtn' href='#'>Add To WishList</MDBBtn>
+
           </MDBCardBody>
           </div>
         </MDBCard>
+        </Link>
       ))}
       </div>
     </div>

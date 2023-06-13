@@ -21,7 +21,7 @@ function HeaderNavbar() {
 
           <div className="center-section">
             <a className="logo" href="/">
-              Logo
+              AJ Furniture
             </a>
           </div>
 
@@ -64,6 +64,7 @@ function HeaderNavbar() {
           <li> <Link to="/sofa">Sofa</Link></li>
           <li><Link to="/table">Table</Link></li>
           <li><Link to="/chair">Chair</Link></li>
+          <li><Link to="/bed">Bed</Link></li>
         </ul>
       </div>
     </a>

@@ -31,50 +31,51 @@ export default function BodyHeader(){
             </div>
 
 
-            <div className='ShopCategory' >
-            <div className='imageContainer d-flex justify-content-center'>
-        <img src={Sofaimg} alt="Image 1" />
+            <div className='ShopCategory'  >
+        <Link to="/sofa" className='imageContainer d-flex justify-content-center linkWithoutDecoration'>
+        <img  src={Sofaimg} alt="Image 1" />
         <p>Sofas</p>
-    </div>
-    <div className='imageContainer'>
+    </Link>
+    <Link to="/chair" className='imageContainer linkWithoutDecoration'>
         <img src={ChairImg} alt="Image 2" />
         <p>Chairs</p>
-    </div>
-    <div className='imageContainer'>
+    </Link>
+
+    <Link to="/table" className='imageContainer linkWithoutDecoration'  >
         <img src={TableImg} alt="Image 3" />
         <p>Tables</p>
-    </div>
-    <div className='imageContainer'>
+    </Link>
+    <Link to="/products" className='imageContainer linkWithoutDecoration' >
         <img src={DiningsetImg} alt="Image 4" />
         <p>Dining Set</p>
-    </div>
-    <div className='imageContainer'>
+    </Link>
+    <Link to="/bed" className='imageContainer linkWithoutDecoration' >
         <img src={BedImg}alt="Image 5" />
         <p>Bed</p>
-    </div>
+    </Link>
     </div>
 
     <div className='ShopCategory' >
-            <div className='imageContainer d-flex justify-content-center'>
+            <Link to="/products" className='imageContainer d-flex justify-content-center linkWithoutDecoration' >
         <img src={StorageImg} alt="Image 1" />
         <p>Storage & organizer</p>
-    </div>
-    <div className='imageContainer'>
+    </Link>
+    <Link to="/products" className='imageContainer linkWithoutDecoration' >
         <img src={PetFurnitureImg} alt="Image 2" />
         <p>Pet Furniture</p>
-    </div>
-    <div className='imageContainer'>
+    </Link>
+    <Link to="/table" className='imageContainer linkWithoutDecoration' >
         <img src={StudyImg} alt="Image 3" />
         <p>Study Tables</p>
-    </div>
-    <div className='imageContainer'>
+    </Link>
+    <Link to="/products" className='imageContainer linkWithoutDecoration'>
         <img src={OfficeFurImg} alt="Image 4" />
         <p>Office Furniture</p>
-    </div>
-    <div className='imageContainer'>
+    </Link>
+    <Link to="/table" className='imageContainer linkWithoutDecoration'>
         <img src={DressingImg}alt="Image 5" />
         <p>Dressing Table</p>
-    </div>
+    </Link>
     </div>
     </div>
 
@@ -82,27 +83,28 @@ export default function BodyHeader(){
             <div>
                 <h3>Shop Best Sellers</h3>
             </div>
-            <div className='BestSellCategory' >
-            <div className='BestSellimageContainer'>
+            <div className='BestSellCategory linkWithoutDecoration' >
+            <Link to="/bed" className='BestSellimageContainer linkWithoutDecoration' >
         <img src={BestSellBed}alt="Image 5" />
         <h4>Beds with Box Storage</h4>
         <p className='BestSellP'>300 + Options, Starting ₹10710</p>
-    </div>
-    <div className='BestSellimageContainer'>
+    </Link>
+    <Link to="/table" className='BestSellimageContainer linkWithoutDecoration' >
         <img src={BestSellTable}alt="Image 5" />
         <h4>Modern Writing Tables</h4>
         <p className='BestSellP'>180+ Options, Starting ₹2799</p>
-    </div>
-    <div className='BestSellimageContainer'>
+    </Link>
+
+    <Link to="/chair" className='BestSellimageContainer linkWithoutDecoration'  >
         <img src={BestSellChair}alt="Image 5" />
         <h4>Ergonomic Chairs</h4>
         <p className='BestSellP'>250+ Options, Starting ₹3799</p>
-    </div>
-    <div className='BestSellimageContainer'>
+    </Link>
+    <Link to="/products" className='BestSellimageContainer linkWithoutDecoration' >
         <img src={BestSellShoeCabin}alt="Image 5" />
         <h4>Shoe Cabinets</h4>
         <p className='BestSellP'>95+ Options, Starting ₹3499</p>
-    </div>
+    </Link>
 
             </div>
 

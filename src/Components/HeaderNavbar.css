@@ -30,9 +30,12 @@
 }
 
 .logo {
+  font-family: 'Teko', sans-serif;
+  font-family: 'Tilt Prism', cursive;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 40px;
+  margin-right: 80px;
 }
 
 .login-logo,

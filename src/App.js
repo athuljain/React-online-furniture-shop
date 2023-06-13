@@ -8,6 +8,7 @@ import Products from './Components/User/Products.jsx';
 import Sofa from './Components/User/Sofa';
 import Chair from './Components/User/Chair';
 import Table from './Components/User/Table';
+import ViewProduct from './Components/User/ViewProduct';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           <Route path='/sofa' element={<Sofa />} />
           <Route path='/chair' element={<Chair />} />
           <Route path='/table' element={<Table />} />
-
+          <Route path='/products/:productId' element={< ViewProduct />} />
         </Routes>
       </Router>
     </div>
