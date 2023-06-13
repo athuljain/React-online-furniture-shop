@@ -1,0 +1,55 @@
+.Sofa-productsList {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .Sofa-cardproduct {
+    background-color: #d1cece;
+    height: 600px;
+    width: 400px;
+    margin-top: 20px;
+  }
+  
+  .Sofa-ProductsImg {
+    width: 350px;
+    height: 350px;
+    margin-top: 10px;
+  }
+  
+  .Sofa-ProductsTitle {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .Sofa-ProductsCategory {
+    font-size: 1rem;
+    color: #181818;
+  }
+  
+  .Sofa-ProductsPrice {
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  .Sofa-ProductscartBtn,
+  .Sofa-ProductsWishlistBtn {
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .Sofa-Products {
+      justify-content: center;
+    }
+  }
+  
+  .Sofa-ProductscartBtn {
+    margin-right: 50px;
+  }
+  
+  .Sofa-ProductsWishlistBtn {
+    margin-left: 50px;
+  }
+  

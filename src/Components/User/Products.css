@@ -1,0 +1,54 @@
+.productsList {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  .cardproduct{
+    background-color: #d1cece;
+    height: 600px;
+    width:400px ;
+    margin-top: 20px;
+  }
+  
+  .allProductsImg {
+    width: 350px;
+    height: 350px;
+    margin-top: 10px;
+  }
+  
+  .allProductsTitle {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .allProductsCategory {
+    font-size: 1rem;
+    color: #181818;
+    
+  }
+  
+  .allProductsPrice {
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  .allProductscartBtn,
+  .allProductsWishlistBtn {
+    margin-top: 10px;
+    
+  }
+  
+  @media (max-width: 768px) {
+    .allProducts {
+      justify-content: center;
+    }
+  }
+  .allProductscartBtn{
+    margin-right: 50px;
+  }
+  .allProductsWishlistBtn{
+    margin-left: 50px;
+  }

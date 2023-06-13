@@ -61,9 +61,9 @@ function HeaderNavbar() {
       Furniture
       <div className="dropdown-list">
         <ul>
-          <li>Sofa</li>
-          <li>Table</li>
-          <li>Chair</li>
+          <li> <Link to="/sofa">Sofa</Link></li>
+          <li><Link to="/table">Table</Link></li>
+          <li><Link to="/chair">Chair</Link></li>
         </ul>
       </div>
     </a>
@@ -94,6 +94,10 @@ function HeaderNavbar() {
     <a className="service-text" href="/">
       Modular
     </a>
+    
+    <Link className="service-text" to="/Products">
+      All Products
+    </Link>
   </div>
 </div>
 
