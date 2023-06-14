@@ -30,13 +30,13 @@ function HeaderNavbar() {
   <AiOutlineUser />
 </Link>
 
-            <a className="wishlist-logo" href="/">
+            <Link className="wishlist-logo" to="/wishlist">
               <GiSelfLove />
-            </a>
+            </Link>
 
-            <a className="cart-logo" href="/">
+            <Link className="cart-logo" to="/cart">
               <BsMinecart />
-            </a>
+            </Link>
           </div>
         </div>
 

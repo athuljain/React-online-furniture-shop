@@ -1,0 +1,25 @@
+.Footer{
+    background-color: cadetblue;
+    margin-top: 70px;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.FooterFirstSession{
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.FooterSecondSession{
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+    text-align: left;
+}
+.App-img{
+    width: 140px;
+    height: 45px;
+}
