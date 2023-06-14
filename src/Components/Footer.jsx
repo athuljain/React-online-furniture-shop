@@ -68,92 +68,117 @@ export default function Footer() {
             </div>
 
             <div className='FooterSecondSession'>
+              <div className='categorySession'>
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>
+              <Link to='/' className='linkWithoutDecoration'>
+              <h4 className='text-uppercase fw-bold mb-4'>
                 <MDBIcon icon="gem" className="me-3" />
-                Company name
-              </h6>
+                Popular Categories
+              </h4>
               <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit.
+                
+
+Sofas,Sectional Sofas,Sofa Sets,Queen Size Beds,
+King Size Beds,Coffee Tables,Dining Sets,Recliners,
+Sofa Cum Beds,Rocking Chairs,Cabinets & Sideboards,Book Shelves,
+TV & Media Units,Wardrobes,Outdoor Furniture,Bar Cabinets,
+Wall Shelves,Photo Frames,Bed Sheets,Table Linen,Study Tables,
+Office Furniture,Dining Tables,Carpets,Wall Art
               </p>
+              </Link>
             </MDBCol>
+            </div>
+
+            <div className='BrandSession'>
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>
+              <Link to='/' className='linkWithoutDecoration'>
+              <h4 className='text-uppercase fw-bold mb-4'>
                 <MDBIcon icon="gem" className="me-3" />
-                Company name
-              </h6>
+                Popular Brands
+              </h4>
               <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit.
+                
+
+
+
+Mintwud,Woodsworth,CasaCraft,
+Amberville,Mudramark,Bohemiana,
+Clouddio,Spacewood,A Globia Creations,
+Febonic,@home,Durian,Evok,Hometown,
+Nilkamal,Crystal Furnitech,Bluewud,
+Duroflex,Sleepyhead,Green Soul,
+Orange Tree
               </p>
+              </Link>
             </MDBCol>
+            </div>
+
+            <div className='citesCategory'>
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>
+              <Link to='/' className='linkWithoutDecoration'>
+              <h4 className='text-uppercase fw-bold mb-4'>
                 <MDBIcon icon="gem" className="me-3" />
-                Company name
-              </h6>
+                Popular cities
+              </h4>
               <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit.
+
+                
+
+
+Bengaluru,Mumbai,Navi Mumbai,Delhi,Hyderabad,
+Pune,Chennai,Gurgaon,Kolkata,Noida,Goa,
+Ghaziabad,Faridabad,Jaipur,Lucknow,Kochi,
+Visakhapatnam,Chandigarh,Vadodara,Nagpur,
+Thiruvananthapuram,Indore,Mysore,Bhopal,
+Surat,Jalandhar,Patna,Ludhiana,Ahmedabad,
+Nashik,Madurai,Kanpur,Aurangabad
               </p>
+              </Link>
             </MDBCol>
+            </div>
 
             </div>
 
-            <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
-              <p>
-                <MDBIcon icon="home" className="me-2" />
-                New York, NY 10012, US
-              </p>
-              <p>
-                <MDBIcon icon="envelope" className="me-3" />
-                info@example.com
-              </p>
-              <p>
-                <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
-              </p>
-              <p>
-                <MDBIcon icon="print" className="me-3" /> + 01 234 567 89
-              </p>
-            </MDBCol>
           </MDBRow>
         </MDBContainer>
       </section>
-      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
-        <div className='me-5 d-none d-lg-block'>
-          <span>Get connected with us on social networks:</span>
+     <div className='ThirdSessionMain'>
+     <div className='ThirdSession'>
+        <div className='ThirdSessionLeft'>
+          <div className='HeadingAccept'>
+          <h3>We accept</h3>
+          </div>
+          <Link className='linkWithoutDecoration' to='/' > <img src='https://ii3.pepperfry.com/assets/w23-pf-visa.jpg' /> </Link>
+          <Link className='linkWithoutDecoration' to='/' > <img src='https://ii2.pepperfry.com/assets/w23-pf-master-card.jpg' /> </Link>
+          <Link className='linkWithoutDecoration' to='/' > <img src='https://ii1.pepperfry.com/assets/w23-pf-maestro.jpg' /> </Link>
+          <Link className='linkWithoutDecoration' to='/' > <img src='https://ii3.pepperfry.com/assets/w23-pf-rupay.jpg' /> </Link>
+          <Link className='linkWithoutDecoration' to='/' > <img src='https://ii3.pepperfry.com/assets/w23-pf-dinners-club.jpg' /> </Link>
+          <Link className='linkWithoutDecoration' to='/' > <img src='https://ii2.pepperfry.com/assets/w23-pf-wallet.jpg' /> </Link>
+          <Link className='linkWithoutDecoration' to='/' > <img src='https://ii1.pepperfry.com/assets/w23-pf-net-banking.jpg' /> </Link>
+
         </div>
+        <div className='ThirdSessionRight'>
+          <div className='HeadingAccept'>
+          <h3>Like What You See? Follow us Here</h3>
+          </div>
+          <Link className='linkWithoutDecoration' to='/' > <img src='https://ii1.pepperfry.com/assets/w23-pf-social-insta.png' /> </Link>
+          <Link className='linkWithoutDecoration' to='/' > <img src='https://ii3.pepperfry.com/assets/w23-pf-social-fb.png' /> </Link>
+          <Link className='linkWithoutDecoration' to='/' > <img src='https://ii3.pepperfry.com/assets/w23-pf-social-pinterest.png' /> </Link>
+          <Link className='linkWithoutDecoration' to='/' > <img src='https://ii2.pepperfry.com/assets/w23-pf-social-linkedin.png' /> </Link>
+          <Link className='linkWithoutDecoration' to='/' > <img src='https://ii3.pepperfry.com/assets/w23-pf-social-youtube.png' /> </Link>
+          <Link className='linkWithoutDecoration' to='/' > <img src='https://ii1.pepperfry.com/assets/w23-pf-social-twitter.png' /> </Link>
+          
 
-        <div>
-          <Link to='/' className='me-4 text-reset'>
-            <MDBIcon fab icon="facebook-f" />
-          </ Link>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="twitter" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="google" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="instagram" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="linkedin" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="github" />
-          </a>
         </div>
-      </section>
+     </div>
+     </div>
+     
 
-
-      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+      <div className='copyRight text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)',color:'white' }}>
         © 2021 Copyright:
-        <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
-        </a>
+        <Link to='/' className='linkWithoutDecoration' >
+          AJ Furniture
+        </Link>
       </div>
     </MDBFooter>
   );

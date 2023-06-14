@@ -59,16 +59,28 @@ img{
     width: 284px;
     height: 370px;
 }
-.BodyHeader h4,p{
+.BodyHeader ,h4,p{
     text-decoration: none;
+    color: black;
 }
 .ShopCategory p{
     text-decoration: none;
+    color: black;
 }
 p{
-    text-decoration: none;
+   
+    color: black;
+}
+h3{
+    color: black;
+}
+.BestSellerH3, .ShopCategoryH3 , .BestSellP{
+    color: black;
 }
 
 .linkWithoutDecoration {
     text-decoration: none;
+  }
+  .BestSellimageContainer h4{
+    color: black;
   }

@@ -18,8 +18,8 @@ export default function Products(){
     
     return(
         <div className='allProducts'>
-      <h1 >All Products</h1>
-      <div className='productsList'>
+      <h1>All Products</h1>
+      <div className='productsList'> 
       {products.map((product) => (
         <Link to={`/products/${product.id}`} key={product.id} className='linkWithoutDecoration' >
         <MDBCard >

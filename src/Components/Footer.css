@@ -1,5 +1,18 @@
+h4 ,h3{
+    color: rgb(254, 254, 253);
+}
+p{
+    color: bisque;
+}
+.footerList .linkWithoutDecoration{
+    color: beige;
+}
+.copyRight .linkWithoutDecoration{
+    color: white;
+}
+
 .Footer{
-    background-color: cadetblue;
+    background-color: rgb(69, 69, 69);
     margin-top: 70px;
     justify-content: space-between;
     padding-left: 20px;
@@ -7,7 +20,7 @@
 }
 .FooterFirstSession{
     display: flex;
-    padding: 40px;
+    padding-top:30px ;
     justify-content: space-between;
     text-align: left;
     margin-left: 50px;
@@ -15,11 +28,42 @@
 }
 .FooterSecondSession{
     display: flex;
-    padding: 40px;
+    padding-top:30px ;
     justify-content: center;
     text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+    
 }
 .App-img{
     width: 140px;
     height: 45px;
+}
+.BrandSession{
+    margin-left: 130px;
+}
+.citesCategory{
+    margin-left: 130px;
+}
+.ThirdSessionLeft{
+    
+    
+    
+}
+.ThirdSessionLeft img{
+    height: 45px;
+    width: 70px;
+}
+
+.ThirdSessionRight img{
+    height: 45px;
+    width: 50px;
+
+}
+.ThirdSessionMain{
+    display: flex;
+    flex-direction: column;
+}
+.copyRight{
+    margin-top: 10px;
 }

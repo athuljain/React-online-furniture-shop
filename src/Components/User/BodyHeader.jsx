@@ -27,7 +27,7 @@ export default function BodyHeader(){
             </div>
             <div>
             <div>
-                <h3>Shop by Category</h3>
+                <h3 className='ShopCategoryH3'>Shop by Category</h3>
             </div>
 
 
@@ -81,7 +81,7 @@ export default function BodyHeader(){
 
         <div>
             <div>
-                <h3>Shop Best Sellers</h3>
+                <h3 className='BestSellerH3'>Shop Best Sellers</h3>
             </div>
             <div className='BestSellCategory linkWithoutDecoration' >
             <Link to="/bed" className='BestSellimageContainer linkWithoutDecoration' >
