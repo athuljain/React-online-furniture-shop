@@ -41,9 +41,9 @@ function ViewProduct() {
                     fluid
                     className="w-100"
                     style={{
-                      marginTop:"20px",
+                      marginTop: "20px",
                       height: "300px",
-                      width:"350px",
+                      width: "350px",
                       borderTopLeftRadius: "15px",
                       borderTopRightRadius: "15px",
                       borderBottomLeftRadius: "15px",
@@ -60,9 +60,7 @@ function ViewProduct() {
                   <div className="d-flex justify-content-between">
                     <div>
                       <p>
-                        <h4 className="text-dark" >
-                          {product.title}
-                        </h4>
+                        <h4 className="text-dark">{product.title}</h4>
                       </p>
                       <p className="small text-muted">{product.category}</p>
                     </div>
@@ -73,15 +71,17 @@ function ViewProduct() {
                   <hr className="my-0" />
                   <div className="d-flex justify-content-between">
                     <p>
-                      <h4  className="text-dark">
-                        Price: {product.price}
-                      </h4>
+                      <h4 className="text-dark">Price: {product.price}</h4>
                     </p>
                   </div>
                   <hr className="my-0" />
                   <div className="d-flex justify-content-between align-items-center pb-2 mb-4">
-                    <MDBBtn className="CartBtn" color="primary">Add to Cart</MDBBtn>
-                    <MDBBtn className="WishListBtn" color="primary">Add to Wishlist</MDBBtn>
+                    <MDBBtn className="CartBtn" color="primary">
+                      Add to Cart
+                    </MDBBtn>
+                    <MDBBtn className="WishListBtn" color="primary">
+                      Add to Wishlist
+                    </MDBBtn>
                   </div>
                 </MDBCardBody>
               </MDBCol>
