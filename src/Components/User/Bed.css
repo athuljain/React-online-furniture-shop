@@ -1,0 +1,55 @@
+.Bed-productsList {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .Bed-cardproduct {
+    background-color: #d1cece;
+    height: 600px;
+    width: 400px;
+    margin-top: 20px;
+  }
+  
+  .Bed-ProductsImg {
+    width: 350px;
+    height: 350px;
+    margin-top: 10px;
+  }
+  
+  .Bed-ProductsTitle {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .Bed-ProductsCategory {
+    font-size: 1rem;
+    color: #181818;
+  }
+  
+  .Bed-ProductsPrice {
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  .Bed-ProductscartBtn,
+  .Bed-ProductsWishlistBtn {
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .Bed-Products {
+      justify-content: center;
+    }
+  }
+  
+  .Bed-ProductscartBtn {
+    margin-right: 50px;
+  }
+  
+  .Bed-ProductsWishlistBtn {
+    margin-left: 50px;
+  }
+  

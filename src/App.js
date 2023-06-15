@@ -8,6 +8,7 @@ import Products from './Components/User/Products.jsx';
 import Sofa from './Components/User/Sofa';
 import Chair from './Components/User/Chair';
 import Table from './Components/User/Table';
+import Bed from './Components/User/Bed';
 import ViewProduct from './Components/User/ViewProduct';
 import Footer from './Components/Footer';
 import Cart from './Components/User/Cart';
@@ -35,6 +36,7 @@ function App() {
           <Route path='/sofa' element={<Sofa />} />
           <Route path='/chair' element={<Chair />} />
           <Route path='/table' element={<Table />} />
+          <Route path='/bed' element={< Bed />} />
           <Route path='/products/:productId'  element={< ViewProduct  handleAddtoCart={handleAddtoCart}/>} />
           <Route path='/cart' element={< Cart cartItems={cartItems} />} />
 
