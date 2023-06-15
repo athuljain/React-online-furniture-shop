@@ -1,10 +1,16 @@
-import React,{useState,useContext} from "react"
+import React,{useState,useContext, useRef, useEffect} from "react"
 import { Link  } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 
 import UserContext from "./UserContext"
 
 export default function Login(){
+    const inputRef=useRef(null)
+
+    useEffect(()=>{
+        inputRef.current.focus()
+    })
+
     const navigate=useNavigate()
 
     const {getUserByEmail}=useContext(UserContext)
@@ -33,7 +39,7 @@ export default function Login(){
             <form>
             <h3>Login</h3>
             <div>
-            <input type="email" placeholder="email" name="email" id="email"
+            <input ref={inputRef} type="email" placeholder="email" name="email" id="email"
             value={email}
             onChange={(e)=>setEmail(e.target.value)}
             required /> <br />

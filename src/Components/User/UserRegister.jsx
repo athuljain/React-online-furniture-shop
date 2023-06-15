@@ -1,8 +1,15 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import UserContext from "./UserContext";
 
 export default function UserRegister() {
+
+    const inputRef=useRef(null)
+
+    useEffect(()=>{
+        inputRef.current.focus()
+    })
+
   const navigate = useNavigate();
   const { addUser } = useContext(UserContext);
 
@@ -28,7 +35,7 @@ export default function UserRegister() {
       <h3>Register</h3>
       <div>
         <input
-          type="text"
+          type="text" ref={inputRef}
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}

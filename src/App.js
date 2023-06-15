@@ -10,8 +10,18 @@ import Chair from './Components/User/Chair';
 import Table from './Components/User/Table';
 import ViewProduct from './Components/User/ViewProduct';
 import Footer from './Components/Footer';
+import Cart from './Components/User/Cart';
+import { useState } from 'react';
+//import { products } from './Components/User/products';
 
 function App() {
+
+  const [cartItems, setCartItems] = useState([]);
+
+  const handleAddtoCart=(product)=>{
+    setCartItems((prevCartItems)=>[...cartItems,product])
+    console.log("product add to cart",product);
+  }
   return (
     <div className="App">
       <Router>
@@ -25,7 +35,9 @@ function App() {
           <Route path='/sofa' element={<Sofa />} />
           <Route path='/chair' element={<Chair />} />
           <Route path='/table' element={<Table />} />
-          <Route path='/products/:productId' element={< ViewProduct />} />
+          <Route path='/products/:productId'  element={< ViewProduct  handleAddtoCart={handleAddtoCart}/>} />
+          <Route path='/cart' element={< Cart cartItems={cartItems} />} />
+
         </Routes>
         <Footer />
       </Router>
