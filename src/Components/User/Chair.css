@@ -1,55 +1,54 @@
 .Chair-ProductsList {
-    padding: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Chair-cardproduct {
+  background-color: #d1cece;
+  height: 600px;
+  width: 400px;
+  margin-top: 20px;
+}
+
+.Chair-ProductsImg {
+  width: 350px;
+  height: 350px;
+  margin-top: 10px;
+}
+
+.Chair-ProductsTitle {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.Chair-ProductsCategory {
+  font-size: 1rem;
+  color: #181818;
+}
+
+.Chair-ProductsPrice {
+  font-size: 1rem;
+  color: #555;
+  font-weight: bold;
+}
+
+.Chair-ProductscartBtn,
+.Chair-ProductsWishlistBtn {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .Chair-ProductsList {
+    justify-content: center;
   }
-  
-  .Chair-cardproduct {
-    background-color: #d1cece;
-    height: 600px;
-    width: 400px;
-    margin-top: 20px;
-  }
-  
-  .Chair-ProductsImg {
-    width: 350px;
-    height: 350px;
-    margin-top: 10px;
-  }
-  
-  .Chair-ProductsTitle {
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  
-  .Chair-ProductsCategory {
-    font-size: 1rem;
-    color: #181818;
-  }
-  
-  .Chair-ProductsPrice {
-    font-size: 1rem;
-    color: #555;
-    font-weight: bold;
-  }
-  
-  .Chair-ProductscartBtn,
-  .Chair-ProductsWishlistBtn {
-    margin-top: 10px;
-  }
-  
-  @media (max-width: 768px) {
-    .Chair-ProductsList {
-      justify-content: center;
-    }
-  }
-  
-  .Chair-ProductscartBtn {
-    margin-right: 50px;
-  }
-  
-  .Chair-ProductsWishlistBtn {
-    margin-left: 50px;
-  }
-  
+}
+
+.Chair-ProductscartBtn {
+  margin-right: 50px;
+}
+
+.Chair-ProductsWishlistBtn {
+  margin-left: 50px;
+}

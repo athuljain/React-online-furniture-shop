@@ -1,19 +1,22 @@
-.BodyHeader{
-    background-size: cover ;
+.BodyHeader {
+    background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
-   
+
 }
-.HeaderImage{
+
+.HeaderImage {
     align-items: center;
     margin-top: 20px;
 
 }
-img{
-    
+
+img {
+
     width: 1200px;
-    height:273px;
+    height: 273px;
 }
+
 .ShopCategory {
     display: flex;
 }
@@ -27,7 +30,7 @@ img{
     margin-top: 20px;
 }
 
-.ShopCategory{
+.ShopCategory {
     justify-content: center;
 }
 
@@ -41,13 +44,14 @@ img{
     margin-top: 5px;
     text-decoration: none;
 }
-.BestSellCategory{
+
+.BestSellCategory {
     display: flex;
     justify-content: center;
 
 }
 
-.BestSellimageContainer{
+.BestSellimageContainer {
     display: flex;
     flex-direction: column;
     margin: 0 10px;
@@ -55,32 +59,43 @@ img{
     margin-top: 20px;
 
 }
-.BestSellimageContainer img{
+
+.BestSellimageContainer img {
     width: 284px;
     height: 370px;
 }
-.BodyHeader ,h4,p{
+
+.BodyHeader,
+h4,
+p {
     text-decoration: none;
     color: black;
 }
-.ShopCategory p{
+
+.ShopCategory p {
     text-decoration: none;
     color: black;
 }
-p{
-   
+
+p {
+
     color: black;
 }
-h3{
+
+h3 {
     color: black;
 }
-.BestSellerH3, .ShopCategoryH3 , .BestSellP{
+
+.BestSellerH3,
+.ShopCategoryH3,
+.BestSellP {
     color: black;
 }
 
 .linkWithoutDecoration {
     text-decoration: none;
-  }
-  .BestSellimageContainer h4{
+}
+
+.BestSellimageContainer h4 {
     color: black;
-  }
+}

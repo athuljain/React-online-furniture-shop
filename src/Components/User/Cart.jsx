@@ -1,38 +1,51 @@
+import React from "react";
+
 export default function Cart({ cartItems = [] }) {
+ const incrementQuantity =()=>{
+
+ }
+
+ const decrementQuantity =()=>{
+
+ }
+ const calculateTotalAmount = () => {
+ }
+   
+
   return (
-    <div>
+    <div className="Cart">
       <h1>Cart</h1>
       {cartItems.length > 0 ? (
-        <ul>
+        <div>
           {cartItems.map((item) => (
-            <li key={item.id}>{item.title}</li>
+            <div key={item.id} className="cart-item">
+              <div className="image-container">
+                <img src={item.image} alt={item.title} style={{ width: "250px" }} />
+              </div>
+              <div className="item-details">
+                <h4 style={{ color: "black" }}>{item.title}</h4>
+                <p style={{ color: "black" }}>Price: {item.price}</p>
+                <div>
+                
+                    <button onClick={() => decrementQuantity()}>-</button>
+                  
+                  <h6>Quantity: </h6>
+                  <button onClick={() => incrementQuantity()}>+</button>
+
+                  <div className="total-amount">
+        <h4 style={{"color":"black"}}>Total Amount: {calculateTotalAmount()}</h4>
+        <button className="buy-button">Buy</button>
+      </div>
+                </div>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       ) : (
         <p style={{ color: "black" }}>Your cart is empty.</p>
       )}
 
-
-
-
-      <div className="h-100 gradient-custom">
-        <div className="container py-5">
-          <div className="row d-flex justify-content-center my-4">
-            <div className="col-md-8">
-              <div className="card mb-4">
-                <div className="card-header py-3">
-                  <h5 className="mb-0">Cart - {cartItems.length} items</h5>
-                </div>
-                
-              </div>
-            </div>
-            
-                
-              </div>
-            </div>
-
-          </div>
-        </div>
-        )}
-
-
+      
+    </div>
+  );
+}
