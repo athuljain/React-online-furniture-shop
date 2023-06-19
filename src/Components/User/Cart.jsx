@@ -1,6 +1,7 @@
 
 
 import React, { useState } from "react";
+import "./Cart.css"
 
 export default function Cart({ cartItems = [],handleAddToCart }) {
   const [quantities, setQuantities] = useState(cartItems.map(() => 1));
@@ -39,7 +40,7 @@ export default function Cart({ cartItems = [],handleAddToCart }) {
 
   const addToCart = (product) => {
     if (isProductInCart(product.id)) {
-      return true; 
+      return true;
     } else {
       handleAddToCart(product);
       return false; 

@@ -19,10 +19,16 @@ function App() {
 
   const [cartItems, setCartItems] = useState([]);
 
-  const handleAddtoCart=(product)=>{
-    setCartItems((prevCartItems)=>[...cartItems,product])
-    console.log("product add to cart",product);
-  }
+  const handleAddtoCart = (product) => {
+    const isAlreadyInCart = cartItems.some((item) => item.id === product.id);
+    if (!isAlreadyInCart) {
+      setCartItems([...cartItems, product]);
+      console.log("Product added to cart", product);
+    } else {
+      console.log("Product already in cart");
+      
+    }
+  };
   return (
     <div className="App">
       <Router>

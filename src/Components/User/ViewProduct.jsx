@@ -21,7 +21,7 @@ function ViewProduct({  handleAddtoCart}) {
   console.log(product);
 
   
-
+  //const [message, setMessage] = useState("");
  
 
   if (!product) {
@@ -30,9 +30,13 @@ function ViewProduct({  handleAddtoCart}) {
   const addToCart = () => {
     const isAlreadyInCart = handleAddtoCart(product);
     if (isAlreadyInCart) {
+    //  setMessage("Product already in cart")
       console.log("Product already in cart");
     } else {
+
+     // setMessage("Product added to Cart")
       console.log("Product added to cart", product);
+      
     }
   };
 
@@ -94,6 +98,10 @@ function ViewProduct({  handleAddtoCart}) {
                     <MDBBtn className="WishListBtn" color="primary">
                       Add to Wishlist
                     </MDBBtn>
+
+                    {/* <div>
+  <h3 style={{"color":"black"}}>{message}</h3>
+</div> */}
                   </div>
                 </MDBCardBody>
               </MDBCol>
@@ -102,6 +110,7 @@ function ViewProduct({  handleAddtoCart}) {
         </MDBCol>
       </MDBRow>
     </MDBContainer>
+    
   );
 }
 

@@ -1,3 +1,95 @@
-.Cart{
-
-}
+.Cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+  }
+  
+  .Cart h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .Cart .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .Cart .image-container {
+    margin-right: 20px;
+  }
+  
+  .Cart .image-container img {
+    width: 250px;
+    border-radius: 5px;
+  }
+  
+  .Cart .item-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Cart .item-details h4 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .Cart .item-details p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .Cart .item-details div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Cart .item-details button.CartBtn {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .Cart h3 {
+    color: #333;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .Cart .CartTotal {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .Cart .CartTotal:hover {
+    background-color: #555;
+  }
+  
+  .Cart p {
+    color: #777;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
