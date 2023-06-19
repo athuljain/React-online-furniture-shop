@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Cart({ cartItems = [] }) {
+
+  const [quantity,setQuantity]=useState(1)
+
  const incrementQuantity =()=>{
+  setQuantity(quantity+1)
 
  }
 
  const decrementQuantity =()=>{
+  setQuantity(quantity-1)
+
 
  }
  const calculateTotalAmount = () => {
@@ -29,7 +35,7 @@ export default function Cart({ cartItems = [] }) {
                 
                     <button onClick={() => decrementQuantity()}>-</button>
                   
-                  <h6>Quantity: </h6>
+                  <h6>Quantity: {quantity} </h6>
                   <button onClick={() => incrementQuantity()}>+</button>
 
                   <div className="total-amount">
