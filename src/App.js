@@ -13,11 +13,13 @@ import ViewProduct from './Components/User/ViewProduct';
 import Footer from './Components/Footer';
 import Cart from './Components/User/Cart';
 import { useState } from 'react';
+import Wishlist from './Components/User/WishList';
 //import { products } from './Components/User/products';
 
 function App() {
 
   const [cartItems, setCartItems] = useState([]);
+  const [wishlistItems, setWishlistItems] = useState([]);
 
   const handleAddtoCart = (product) => {
     const isAlreadyInCart = cartItems.some((item) => item.id === product.id);
@@ -29,6 +31,18 @@ function App() {
       
     }
   };
+
+
+  const handleAddtoWishlist = (product) => {
+    const isAlreadyInWishlist = wishlistItems.some((item) => item.id === product.id);
+    if (isAlreadyInWishlist) {
+      console.log("Product already in Wishlist");
+    } else {
+      setWishlistItems([...wishlistItems, product]);
+      console.log("Product added to Wishlist", product);
+    }
+  };
+
   return (
     <div className="App">
       <Router>
@@ -43,8 +57,9 @@ function App() {
           <Route path='/chair' element={<Chair />} />
           <Route path='/table' element={<Table />} />
           <Route path='/bed' element={< Bed />} />
-          <Route path='/products/:productId'  element={< ViewProduct  handleAddtoCart={handleAddtoCart}/>} />
+          <Route path='/products/:productId'  element={< ViewProduct  handleAddtoCart={handleAddtoCart} handleAddtoWishlist={handleAddtoWishlist} />} />
           <Route path='/cart' element={< Cart cartItems={cartItems} />} />
+          <Route path='/wishlist' element={<Wishlist wishlistItems={wishlistItems} />} />
 
         </Routes>
         <Footer />

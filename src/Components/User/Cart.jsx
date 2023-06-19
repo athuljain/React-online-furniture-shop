@@ -46,6 +46,7 @@ export default function Cart({ cartItems = [],handleAddToCart }) {
       return false; 
     }
   };
+  
 
   return (
     <div className="Cart">

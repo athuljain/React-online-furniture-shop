@@ -13,7 +13,7 @@ import {
   MDBRipple,
 } from "mdb-react-ui-kit";
 
-function ViewProduct({  handleAddtoCart}) {
+function ViewProduct({  handleAddtoCart, handleAddtoWishlist }) {
   const { productId } = useParams();
   const parsedProductId = parseInt(productId, 10);
   const product = products.find((p) => p.id === parsedProductId);
@@ -30,12 +30,28 @@ function ViewProduct({  handleAddtoCart}) {
   const addToCart = () => {
     const isAlreadyInCart = handleAddtoCart(product);
     if (isAlreadyInCart) {
-    //  setMessage("Product already in cart")
+    
       console.log("Product already in cart");
     } else {
 
-     // setMessage("Product added to Cart")
+    
       console.log("Product added to cart", product);
+      
+    }
+  };
+
+  
+
+ 
+  const addToWishlist = () => {
+   const isAlreadyInWishList= handleAddtoWishlist(product);
+    if (isAlreadyInWishList) {
+    
+      console.log("Product already in wishlist");
+    } else {
+
+    
+      console.log("Product added to wishlist", product);
       
     }
   };
@@ -95,7 +111,7 @@ function ViewProduct({  handleAddtoCart}) {
                     <MDBBtn className="CartBtn" color="primary" onClick={addToCart}>
                       Add to Cart
                     </MDBBtn>
-                    <MDBBtn className="WishListBtn" color="primary">
+                    <MDBBtn className="WishListBtn" color="primary" onClick={addToWishlist}>
                       Add to Wishlist
                     </MDBBtn>
 
