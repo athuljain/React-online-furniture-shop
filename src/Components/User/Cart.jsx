@@ -23,6 +23,10 @@ export default function Cart({ cartItems = [] }) {
     return price * quantity;
   };
 
+  const CartTotal=()=>{
+
+  }
+
   return (
     <div className="Cart">
       <h1>Cart</h1>
@@ -37,13 +41,22 @@ export default function Cart({ cartItems = [] }) {
                 <h4 style={{ color: "black" }}>{item.title}</h4>
                 <p style={{ color: "black" }}>Price: {calculateTotalAmount(item.price, quantities[index])}</p>
                 <div>
-                  <button onClick={() => decrementQuantity(index)}>-</button>
+                  <button className="CartBtn" onClick={() => decrementQuantity(index)}>-</button>
                   <h6>Quantity: {quantities[index]} </h6>
-                  <button onClick={() => incrementQuantity(index)}>+</button>
+                  <button className="CartBtn" onClick={() => incrementQuantity(index)}>+</button>
                 </div>
               </div>
+             
+
+
             </div>
-          ))}
+
+            ))}
+            <div>
+                <h3 style={{"color":"black"}}>Total Amout : {CartTotal}</h3>
+                <button className="CartTotal"  > Buy Now</button>
+              
+            </div>
         </div>
       ) : (
         <p style={{ color: "black" }}>Your cart is empty.</p>
