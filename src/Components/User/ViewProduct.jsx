@@ -13,7 +13,7 @@ import {
   MDBRipple,
 } from "mdb-react-ui-kit";
 
-function ViewProduct({handleAddtoCart}) {
+function ViewProduct({  handleAddtoCart}) {
   const { productId } = useParams();
   const parsedProductId = parseInt(productId, 10);
   const product = products.find((p) => p.id === parsedProductId);
@@ -27,13 +27,17 @@ function ViewProduct({handleAddtoCart}) {
   if (!product) {
     return <div>No Product Found</div>;
   }
-  const addToCart=()=>{
-    handleAddtoCart(product)
-    console.log("product add to cart",product);
-  }
+  const addToCart = () => {
+    const isAlreadyInCart = handleAddtoCart(product);
+    if (isAlreadyInCart) {
+      console.log("Product already in cart");
+    } else {
+      console.log("Product added to cart", product);
+    }
+  };
 
   return (
-    <MDBContainer fluid className="my-5">
+    <MDBContainer fluid className="ViewContainer my-5">
       <MDBRow className="justify-content-center">
         <MDBCol md="8" lg="6" xl="4">
           <MDBCard style={{ borderRadius: "15px" }}>
@@ -44,7 +48,7 @@ function ViewProduct({handleAddtoCart}) {
                   rippleTag="div"
                   className="bg-image rounded hover-overlay"
                 >
-                  <MDBCardImage
+                  <MDBCardImage 
                     src={product.image}
                     fluid
                     className="w-100"

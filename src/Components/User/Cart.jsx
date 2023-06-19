@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-export default function Cart({ cartItems = [] }) {
+export default function Cart({ cartItems = [],handleAddToCart }) {
   const [quantities, setQuantities] = useState(cartItems.map(() => 1));
 
   const incrementQuantity = (index) => {
@@ -19,13 +19,32 @@ export default function Cart({ cartItems = [] }) {
     }
   };
 
+  const CartTotal = () => {
+    let totalAmount = 0;
+    cartItems.forEach((item, index) => {
+      const amount = calculateTotalAmount(item.price, quantities[index]);
+      totalAmount += amount;
+    });
+    return totalAmount;
+  };
+ 
+
   const calculateTotalAmount = (price, quantity) => {
     return price * quantity;
   };
 
-  const CartTotal=()=>{
+  const isProductInCart = (productId) => {
+    return cartItems.some((item) => item.id === productId);
+  };
 
-  }
+  const addToCart = (product) => {
+    if (isProductInCart(product.id)) {
+      return true; 
+    } else {
+      handleAddToCart(product);
+      return false; 
+    }
+  };
 
   return (
     <div className="Cart">
@@ -53,7 +72,7 @@ export default function Cart({ cartItems = [] }) {
 
             ))}
             <div>
-                <h3 style={{"color":"black"}}>Total Amout : {CartTotal}</h3>
+                <h3 style={{"color":"black"}}>Total Amout : {CartTotal()}</h3>
                 <button className="CartTotal"  > Buy Now</button>
               
             </div>
