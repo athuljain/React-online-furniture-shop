@@ -21,7 +21,7 @@
 
 .right-section {
   display: flex;
-  margin-right:10px ;
+  margin-right: 10px;
 }
 
 .right-section > * {
@@ -45,6 +45,7 @@
   color: black;
   font-size: 24px;
 }
+
 .navbar-second-line {
   display: flex;
   justify-content: center;
@@ -64,16 +65,14 @@
 .link-text:not(:last-child) {
   margin-right: 20px;
 }
+
 .navbar-third-line {
   display: flex;
   justify-content: center;
   margin-top: 100px;
-  
-  
- 
-  
 }
-.thrid-nav{
+
+.thrid-nav {
   margin-top: 10px;
   background-color: black;
   height: 30px;
@@ -85,7 +84,6 @@
   margin: 0px 10px 15px;
   font-weight: bold;
   margin-top: 15px;
-  
 }
 
 .service-text:hover {
@@ -166,6 +164,126 @@
   background-color: #0056b3;
 }
 
+/* Media Queries */
 
+@media (max-width: 768px) {
+  .Nav-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-  
+  .left-section {
+    margin: 10px 0;
+  }
+
+  .right-section {
+    margin: 10px 0;
+    justify-content: center;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .navbar-second-line {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar-third-line {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .dropdown-list {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .Nav-bar {
+    flex-direction: column;
+  }
+
+  .right-section {
+    margin-top: 10px;
+  }
+
+  .navbar-second-line,
+  .navbar-third-line {
+    margin-top: 10px;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 912px) {
+  .navbar-third-line {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: black;
+  }
+
+  .service-text {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 820px) {
+  .navbar-third-line {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Nav-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .left-section {
+    margin: 10px 0;
+  }
+
+  .right-section {
+    margin: 10px 0;
+    justify-content: center;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .navbar-second-line {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar-third-line {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: black;
+  }
+
+  .dropdown-list {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .Nav-bar {
+    flex-direction: column;
+  }
+
+  .right-section {
+    margin-top: 10px;
+  }
+
+  .navbar-second-line,
+  .navbar-third-line {
+    margin-top: 10px;
+  }
+}
+

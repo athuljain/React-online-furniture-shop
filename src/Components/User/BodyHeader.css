@@ -2,100 +2,125 @@
     background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
-
-}
-
-.HeaderImage {
+  }
+  
+  .HeaderImage {
     align-items: center;
     margin-top: 20px;
-
-}
-
-img {
-
-    width: 1200px;
-    height: 273px;
-}
-
-.ShopCategory {
+  }
+  
+  img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+  }
+  
+  .ShopCategory {
     display: flex;
-}
-
-.imageContainer {
-
+    justify-content: center;
+  }
+  
+  .imageContainer {
     display: flex;
     flex-direction: column;
     margin: 0 10px;
     align-items: center;
     margin-top: 20px;
-}
-
-.ShopCategory {
-    justify-content: center;
-}
-
-
-.imageContainer img {
-    width: 223px;
-    height: 250px;
-}
-
-.imageContainer p {
+  }
+  
+  .imageContainer img {
+    width: 100%;
+    max-width: 223px;
+    height: auto;
+  }
+  
+  .imageContainer p {
     margin-top: 5px;
     text-decoration: none;
-}
-
-.BestSellCategory {
+  }
+  
+  .BestSellCategory {
     display: flex;
     justify-content: center;
-
-}
-
-.BestSellimageContainer {
+  }
+  
+  .BestSellimageContainer {
     display: flex;
     flex-direction: column;
     margin: 0 10px;
     align-items: center;
     margin-top: 20px;
-
-}
-
-.BestSellimageContainer img {
-    width: 284px;
-    height: 370px;
-}
-
-.BodyHeader,
-h4,
-p {
+  }
+  
+  .BestSellimageContainer img {
+    width: 100%;
+    max-width: 284px;
+    height: auto;
+  }
+  
+  .BodyHeader,
+  h4,
+  p {
     text-decoration: none;
     color: black;
-}
-
-.ShopCategory p {
+  }
+  
+  .ShopCategory p {
     text-decoration: none;
     color: black;
-}
-
-p {
-
+  }
+  
+  p {
     color: black;
-}
-
-h3 {
+  }
+  
+  h3 {
     color: black;
-}
-
-.BestSellerH3,
-.ShopCategoryH3,
-.BestSellP {
+  }
+  
+  .BestSellerH3,
+  .ShopCategoryH3,
+  .BestSellP {
     color: black;
-}
-
-.linkWithoutDecoration {
+  }
+  
+  .linkWithoutDecoration {
     text-decoration: none;
-}
-
-.BestSellimageContainer h4 {
+  }
+  
+  .BestSellimageContainer h4 {
     color: black;
-}
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 767px) {
+    .imageContainer,
+    .BestSellimageContainer {
+      margin: 10px;
+    }
+  
+    .imageContainer p,
+    .BestSellimageContainer p {
+      font-size: 14px;
+    }
+  
+    .BestSellimageContainer h4 {
+      font-size: 16px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .imageContainer,
+    .BestSellimageContainer {
+      margin: 10px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .imageContainer,
+    .BestSellimageContainer {
+      margin: 0 10px;
+    }
+  }
+  
