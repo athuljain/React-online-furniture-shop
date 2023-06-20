@@ -43,6 +43,11 @@ function App() {
     }
   };
 
+  const removeFromWishList = (itemId) => {
+    const updatedWishlistItems = wishlistItems.filter((item) => item.id !== itemId);
+    setWishlistItems(updatedWishlistItems);
+  };
+
   return (
     <div className="App">
       <Router>
@@ -59,7 +64,7 @@ function App() {
           <Route path='/bed' element={< Bed />} />
           <Route path='/products/:productId'  element={< ViewProduct  handleAddtoCart={handleAddtoCart} handleAddtoWishlist={handleAddtoWishlist} />} />
           <Route path='/cart' element={< Cart cartItems={cartItems} />} />
-          <Route path='/wishlist' element={<Wishlist wishlistItems={wishlistItems} />} />
+          <Route path='/wishlist' element={<Wishlist wishlistItems={wishlistItems} removeFromWishList={removeFromWishList} />} />
 
         </Routes>
         <Footer />

@@ -1,7 +1,20 @@
 import React from "react";
 import "./WishList.css"
 
-export default function Wishlist({ wishlistItems }) {
+import {CiCircleRemove  } from "react-icons/ci";
+import { Link } from "react-router-dom";
+
+
+
+
+
+export default function Wishlist({ wishlistItems,removeFromWishList }) {
+
+  const handleRemoveFromWishList = (itemId) => {
+    removeFromWishList(itemId);
+  };
+
+
   return (
     <div className="WishList">
       <h3 className="WishlistHeader">Wish List</h3>
@@ -14,6 +27,11 @@ export default function Wishlist({ wishlistItems }) {
             <div className="WishlistDetails" key={item.id}>
               <p className="wishLsitTitle">{item.title}</p>
               <p className="WishListPrice">Price: {item.price}</p>
+            </div>
+            <div>
+            <Link className="remove-logo" onClick={()=>handleRemoveFromWishList(item.id)}>
+              <CiCircleRemove />
+            </Link>
             </div>
             </div>
           ))}
