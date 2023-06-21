@@ -15,10 +15,11 @@ import Cart from './Components/User/Cart';
 import { useState } from 'react';
 import Wishlist from './Components/User/WishList';
 import AdminBody from './Components/Admin/AdminBody';
+import { UserProvider } from './Components/User/UserContext';
 //import { products } from './Components/User/products';
 
 function App() {
-
+  
   const location=useLocation
 
   const [cartItems, setCartItems] = useState([]);
@@ -57,6 +58,7 @@ function App() {
 
   return (
     <div className="App">
+      <UserProvider> 
       <Router>
         {RenderHeaderAndFooter && <HeaderNavbar /> } 
         
@@ -79,6 +81,7 @@ function App() {
         
        
       </Router>
+      </UserProvider>
     </div>
   );
 }

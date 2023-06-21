@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
 import { products } from "./products";
 import "./ViewProducts.css";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import UserContext from "./UserContext";
+
 import {
   MDBContainer,
   MDBRow,
@@ -13,14 +15,17 @@ import {
   MDBRipple,
 } from "mdb-react-ui-kit";
 
+
 function ViewProduct({  handleAddtoCart, handleAddtoWishlist }) {
+
+  const { setLoginStatus } = useContext(UserContext);
   const { productId } = useParams();
   const parsedProductId = parseInt(productId, 10);
   const product = products.find((p) => p.id === parsedProductId);
   
   console.log(product);
 
-  const [loginStatus, setLoginStatus] = useState("");
+  const {loginStatus} = useContext(UserContext) 
   
   //const [message, setMessage] = useState("");
  

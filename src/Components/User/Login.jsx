@@ -1,63 +1,74 @@
-import React,{useState,useContext, useRef, useEffect} from "react"
-import { Link  } from "react-router-dom"
-import { useNavigate } from "react-router-dom"
+import React, { useState, useContext, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import "./Login.css"
 
-import UserContext from "./UserContext"
+import UserContext from "./UserContext";
 
-export default function Login(){
-    const inputRef=useRef(null)
+export default function Login() {
+  const inputRef = useRef(null);
 
-    // useEffect(()=>{
-    //     inputRef.current.focus()
-    // })
+  const navigate = useNavigate();
 
-    const navigate=useNavigate()
+  const { getUserByEmail } = useContext(UserContext);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loginStatus, setLoginStatus] = useState("");
 
-    const {getUserByEmail}=useContext(UserContext)
-    const [email,setEmail] = useState('')
-    const [password,setPassword]=useState('')
-    const [loginStatus, setLoginStatus] = useState("");
+  const handleButtonClick = () => {
+    const user = getUserByEmail(email);
 
-    console.log(email);
-    console.log(password);
-
-    
-    const handleButtonClick=()=>{
-        const user=getUserByEmail(email)
-        console.log(user);
-
-        if (user && user.password===password){
-
-            navigate('/')
-            setLoginStatus('success')
-            console.log("Login Success");
-        }else{
-            setLoginStatus('failure')
-            console.log("login failed");
-        }
+    if (user && user.password === password) {
+      navigate("/");
+      setLoginStatus("success");
+    } else {
+      setLoginStatus("failure");
     }
-    return(
+  };
 
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
+  return (
+    <div className="login-container">
+      <form className="login-form">
+        <h3 className="login-header">Login</h3>
         <div>
-            <form>
-            <h3>Login</h3>
-            <div>
-            <input ref={inputRef} type="email" placeholder="email" name="email" id="email"
+          <input
+            className="login-input"
+            ref={inputRef}
+            type="email"
+            placeholder="Email"
+            name="email"
+            id="email"
             value={email}
-            onChange={(e)=>setEmail(e.target.value)}
-            required /> <br />
-            <input type="password" placeholder="password" id="password" name="password"
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <br />
+          <input
+            className="login-input"
+            type="password"
+            placeholder="Password"
+            id="password"
+            name="password"
             value={password}
-            onChange={(e)=>setPassword(e.target.value)}
-            required /> <br /> <br />
-            <button onClick={handleButtonClick} type="button" >Sign In</button>
-            </div>
-
-            <h6> Don't Have an Account <Link to="/register">Create</Link></h6>
-
-            </form>
-            {loginStatus === "success" && <p style={{"color":"black"}}>Login successful!</p>}
-            {loginStatus === "failure" && <p style={{"color":"black"}}>Login failed. Please try again.</p>}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <br /> <br />
+          <button className="signin-btn" onClick={handleButtonClick} type="button">
+            Sign In
+          </button>
         </div>
-    )
+
+        <h6>
+          Don't have an account? <Link to="/register">Create</Link>
+        </h6>
+      </form>
+      {loginStatus === "success" && <p className="login-success">Login successful!</p>}
+      {loginStatus === "failure" && <p className="login-failure" style={{"color":"red"}}>Login failed. Please try again.</p>}
+    </div>
+  );
 }

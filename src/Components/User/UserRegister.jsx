@@ -1,14 +1,14 @@
 import React, { useState, useContext, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import UserContext from "./UserContext";
+import './UserRegister.css'
 
 export default function UserRegister() {
+  const inputRef = useRef(null);
 
-     const inputRef=useRef(null)
-
-    // useEffect(()=>{
-    //     inputRef.current.focus()
-    // })
+  // useEffect(()=>{
+  //     inputRef.current.focus()
+  // })
 
   const navigate = useNavigate();
   const { addUser } = useContext(UserContext);
@@ -31,38 +31,43 @@ export default function UserRegister() {
   };
 
   return (
-    <div>
-      <h3>Register</h3>
-      <div>
+    <div className="register-container">
+      <h3 className="register-header">Register</h3>
+      <div className="register-body">
         <input
-          type="text" ref={inputRef}
+          className="register-input"
+          type="text"
+          ref={inputRef}
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-        />{" "}
+        />
         <br />
         <input
+          className="register-input"
           type="text"
           placeholder="Phone"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-        />{" "}
+        />
         <br />
         <input
+          className="register-input"
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-        />{" "}
+        />
         <br />
         <input
+          className="register-input"
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-        />{" "}
+        />
         <br />
-        <button onClick={handleButtonClick} type="submit">
+        <button className="submit-btn" onClick={handleButtonClick} type="submit">
           Submit
         </button>
       </div>
