@@ -34,20 +34,7 @@ export default function Cart({ cartItems = [],handleAddToCart }) {
     return price * quantity;
   };
 
-  const isProductInCart = (productId) => {
-    return cartItems.some((item) => item.id === productId);
-  };
-
-  const addToCart = (product) => {
-    if (isProductInCart(product.id)) {
-      return true;
-    } else {
-      handleAddToCart(product);
-      return false; 
-    }
-  };
-  
-
+ 
   return (
     <div className="Cart">
       <h1>Cart</h1>

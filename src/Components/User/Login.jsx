@@ -7,15 +7,16 @@ import UserContext from "./UserContext"
 export default function Login(){
     const inputRef=useRef(null)
 
-    useEffect(()=>{
-        inputRef.current.focus()
-    })
+    // useEffect(()=>{
+    //     inputRef.current.focus()
+    // })
 
     const navigate=useNavigate()
 
     const {getUserByEmail}=useContext(UserContext)
     const [email,setEmail] = useState('')
     const [password,setPassword]=useState('')
+    const [loginStatus, setLoginStatus] = useState("");
 
     console.log(email);
     console.log(password);
@@ -28,8 +29,10 @@ export default function Login(){
         if (user && user.password===password){
 
             navigate('/')
+            setLoginStatus('success')
             console.log("Login Success");
         }else{
+            setLoginStatus('failure')
             console.log("login failed");
         }
     }
@@ -53,7 +56,8 @@ export default function Login(){
             <h6> Don't Have an Account <Link to="/register">Create</Link></h6>
 
             </form>
-
+            {loginStatus === "success" && <p style={{"color":"black"}}>Login successful!</p>}
+            {loginStatus === "failure" && <p style={{"color":"black"}}>Login failed. Please try again.</p>}
         </div>
     )
 }

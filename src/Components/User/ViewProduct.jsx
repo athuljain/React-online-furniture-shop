@@ -20,6 +20,7 @@ function ViewProduct({  handleAddtoCart, handleAddtoWishlist }) {
   
   console.log(product);
 
+  const [loginStatus, setLoginStatus] = useState("");
   
   //const [message, setMessage] = useState("");
  
@@ -28,6 +29,7 @@ function ViewProduct({  handleAddtoCart, handleAddtoWishlist }) {
     return <div>No Product Found</div>;
   }
   const addToCart = () => {
+    if(loginStatus === 'success'){
     const isAlreadyInCart = handleAddtoCart(product);
     if (isAlreadyInCart) {
     
@@ -38,7 +40,11 @@ function ViewProduct({  handleAddtoCart, handleAddtoWishlist }) {
       console.log("Product added to cart", product);
       
     }
-  };
+  }else{
+    setLoginStatus('failure')
+  }
+}
+  ;
 
   
 
@@ -111,6 +117,7 @@ function ViewProduct({  handleAddtoCart, handleAddtoWishlist }) {
                     <MDBBtn className="CartBtn" color="primary" onClick={addToCart}>
                       Add to Cart
                     </MDBBtn>
+        
                     <MDBBtn className="WishListBtn" color="primary" onClick={addToWishlist}>
                       Add to Wishlist
                     </MDBBtn>
@@ -118,6 +125,12 @@ function ViewProduct({  handleAddtoCart, handleAddtoWishlist }) {
                     {/* <div>
   <h3 style={{"color":"black"}}>{message}</h3>
 </div> */}
+            {loginStatus === "success" && (
+        <p style={{ color: "black" }}>Successfully added to cart!</p>
+      )}
+      {loginStatus === "failure" && (
+        <p style={{ color: "black" }}>Please login to add to cart.</p>
+      )}
                   </div>
                 </MDBCardBody>
               </MDBCol>

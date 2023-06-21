@@ -4,11 +4,11 @@ import UserContext from "./UserContext";
 
 export default function UserRegister() {
 
-    const inputRef=useRef(null)
+     const inputRef=useRef(null)
 
-    useEffect(()=>{
-        inputRef.current.focus()
-    })
+    // useEffect(()=>{
+    //     inputRef.current.focus()
+    // })
 
   const navigate = useNavigate();
   const { addUser } = useContext(UserContext);

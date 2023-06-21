@@ -19,9 +19,9 @@ function HeaderNavbar() {
           </div>
 
           <div className="center-section">
-            <a className="logo" href="/">
+            <Link className="logo" to="/">
               AJ Furniture
-            </a>
+            </Link>
           </div>
 
           <div className="right-section">
@@ -56,8 +56,8 @@ function HeaderNavbar() {
 
         <div className="thrid-nav">
           <div className="navbar-thrid-line">
-            <a className="service-text" href="/">
-              Furniture
+            <Link to='/' className="service-text" >
+              Furniture 
               <div className="dropdown-list">
                 <ul>
                   <li>
@@ -75,7 +75,8 @@ function HeaderNavbar() {
                   </li>
                 </ul>
               </div>
-            </a>
+              </Link>
+            
             <a className="service-text" href="/">
               Home Decor
               <div className="dropdown-list">

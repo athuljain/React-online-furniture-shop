@@ -1,0 +1,24 @@
+.Left-Side-Admin {
+    float: left;
+    width: 20%;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .Left-Side-Admin-details {
+    margin-top: 20px;
+  }
+  
+  .Admin-Details-page {
+    margin-left: 20%;
+    padding: 20px;
+  }
+  
+  .admin-Head {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  
+  

@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes,useLocation  } from 'react-router-dom';
 import Login from './Components/User/Login';
 import UserRegister from './Components/User/UserRegister';
 import HeaderNavbar from './Components/HeaderNavbar';
@@ -14,9 +14,12 @@ import Footer from './Components/Footer';
 import Cart from './Components/User/Cart';
 import { useState } from 'react';
 import Wishlist from './Components/User/WishList';
+import AdminBody from './Components/Admin/AdminBody';
 //import { products } from './Components/User/products';
 
 function App() {
+
+  const location=useLocation
 
   const [cartItems, setCartItems] = useState([]);
   const [wishlistItems, setWishlistItems] = useState([]);
@@ -48,10 +51,14 @@ function App() {
     setWishlistItems(updatedWishlistItems);
   };
 
+  
+  
+  const RenderHeaderAndFooter = location.path !== "/admin";
+
   return (
     <div className="App">
       <Router>
-        <HeaderNavbar />
+        {RenderHeaderAndFooter && <HeaderNavbar /> } 
         
         <Routes>
           <Route path="/login" element={<Login />} />
@@ -65,9 +72,12 @@ function App() {
           <Route path='/products/:productId'  element={< ViewProduct  handleAddtoCart={handleAddtoCart} handleAddtoWishlist={handleAddtoWishlist} />} />
           <Route path='/cart' element={< Cart cartItems={cartItems} />} />
           <Route path='/wishlist' element={<Wishlist wishlistItems={wishlistItems} removeFromWishList={removeFromWishList} />} />
-
+          <Route path='/admin' element={ <AdminBody />} />
         </Routes>
-        <Footer />
+        {RenderHeaderAndFooter && <Footer /> } 
+        
+        
+       
       </Router>
     </div>
   );
