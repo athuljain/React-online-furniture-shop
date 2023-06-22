@@ -9,14 +9,21 @@ export const UserProvider = ({ children }) => {
     setRegisteredUsers([...registeredUsers, userData]);
   };
 
+  
   const getUserByEmail = (email) => {
     return registeredUsers.find((user) => user.email === email);
   };
 
+  const [loginStatus,setLoginStatus] = useState("")
+
   const value = {
     addUser,
     getUserByEmail,
+    loginStatus,
+    setLoginStatus,
   };
+
+ 
 
   return (
     <UserContext.Provider value={value}>{children}</UserContext.Provider>

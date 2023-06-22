@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { products } from "./products";
 import "./ViewProducts.css";
 import React, { useContext, useState } from "react";
@@ -18,14 +18,15 @@ import {
 
 function ViewProduct({  handleAddtoCart, handleAddtoWishlist }) {
 
-  const { setLoginStatus } = useContext(UserContext);
+  const { loginStatus, setLoginStatus } = useContext(UserContext);
+
   const { productId } = useParams();
   const parsedProductId = parseInt(productId, 10);
   const product = products.find((p) => p.id === parsedProductId);
   
   console.log(product);
 
-  const {loginStatus} = useContext(UserContext) 
+  const [addToCartMessage,setAddToCartMessage]=useState("") 
   
   //const [message, setMessage] = useState("");
  
@@ -33,13 +34,16 @@ function ViewProduct({  handleAddtoCart, handleAddtoWishlist }) {
   if (!product) {
     return <div>No Product Found</div>;
   }
+
   const addToCart = () => {
     if(loginStatus === 'success'){
     const isAlreadyInCart = handleAddtoCart(product);
     if (isAlreadyInCart) {
+      setAddToCartMessage("Product already in cart");
     
       console.log("Product already in cart");
     } else {
+      setAddToCartMessage("Product added to cart");
 
     
       console.log("Product added to cart", product);
@@ -118,24 +122,21 @@ function ViewProduct({  handleAddtoCart, handleAddtoWishlist }) {
                     </p>
                   </div>
                   <hr className="my-0" />
-                  <div className="d-flex justify-content-between align-items-center pb-2 mb-4">
+                  <div className="view-product-btns d-flex justify-content-between align-items-center pb-2 mb-4">
                     <MDBBtn className="CartBtn" color="primary" onClick={addToCart}>
                       Add to Cart
                     </MDBBtn>
-        
+                   
                     <MDBBtn className="WishListBtn" color="primary" onClick={addToWishlist}>
                       Add to Wishlist
                     </MDBBtn>
-
-                    {/* <div>
-  <h3 style={{"color":"black"}}>{message}</h3>
-</div> */}
-            {loginStatus === "success" && (
-        <p style={{ color: "black" }}>Successfully added to cart!</p>
-      )}
-      {loginStatus === "failure" && (
-        <p style={{ color: "black" }}>Please login to add to cart.</p>
-      )}
+                    </div>
+                 <div className="login-status">
+          {addToCartMessage && <p style={{ color: "black" }}>{addToCartMessage}</p>}
+                    {loginStatus === "failure" && (
+                      <Link to='/login' style={{ color: "black" }}>Please login to add to cart.</Link>
+                    )}
+                    
                   </div>
                 </MDBCardBody>
               </MDBCol>

@@ -6,12 +6,14 @@ import './UserRegister.css'
 export default function UserRegister() {
   const inputRef = useRef(null);
 
+  const {addUser,setLoginStatus}=useContext(UserContext)
+
   // useEffect(()=>{
   //     inputRef.current.focus()
   // })
 
   const navigate = useNavigate();
-  const { addUser } = useContext(UserContext);
+  
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -26,6 +28,7 @@ export default function UserRegister() {
       password,
     };
     addUser(userData);
+    setLoginStatus('success')
     navigate("/login");
     console.log(userData);
   };
