@@ -24,6 +24,8 @@ function App() {
 
   const [cartItems, setCartItems] = useState([]);
   const [wishlistItems, setWishlistItems] = useState([]);
+//  const [userLoginStatus,setUserLoginStatus]=useState(null)
+  
 
   const handleAddtoCart = (product) => {
     const isAlreadyInCart = cartItems.some((item) => item.id === product.id);
@@ -52,6 +54,11 @@ function App() {
     setWishlistItems(updatedWishlistItems);
   };
 
+  const removeFromCart=(itemId)=>{
+    const updatedCartItems=cartItems.filter((item)=>item.id !== itemId)
+    setCartItems(updatedCartItems)
+  }
+
   
   
   const RenderHeaderAndFooter = location.path !== "/admin";
@@ -60,10 +67,10 @@ function App() {
     <div className="App">
       <UserProvider> 
       <Router>
-        {RenderHeaderAndFooter && <HeaderNavbar /> } 
+        {RenderHeaderAndFooter && <HeaderNavbar   /> } 
         
         <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login  />} />
           <Route path='/register' element={<UserRegister />} />
           <Route path='/' element={<BodyHeader />} />
           <Route path='/products' element={<Products />} />
@@ -72,7 +79,7 @@ function App() {
           <Route path='/table' element={<Table />} />
           <Route path='/bed' element={< Bed />} />
           <Route path='/products/:productId'  element={< ViewProduct  handleAddtoCart={handleAddtoCart} handleAddtoWishlist={handleAddtoWishlist} />} />
-          <Route path='/cart' element={< Cart cartItems={cartItems} />} />
+          <Route path='/cart' element={< Cart cartItems={cartItems} removeFromCart={removeFromCart} />} />
           <Route path='/wishlist' element={<Wishlist wishlistItems={wishlistItems} removeFromWishList={removeFromWishList} />} />
           <Route path='/admin' element={ <AdminBody />} />
         </Routes>

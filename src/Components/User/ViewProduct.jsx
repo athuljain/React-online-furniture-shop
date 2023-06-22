@@ -27,6 +27,7 @@ function ViewProduct({  handleAddtoCart, handleAddtoWishlist }) {
   console.log(product);
 
   const [addToCartMessage,setAddToCartMessage]=useState("") 
+  const [addToWishListMessage,setAddToCartWishListMessage] = useState("")
   
   //const [message, setMessage] = useState("");
  
@@ -39,11 +40,11 @@ function ViewProduct({  handleAddtoCart, handleAddtoWishlist }) {
     if(loginStatus === 'success'){
     const isAlreadyInCart = handleAddtoCart(product);
     if (isAlreadyInCart) {
-      setAddToCartMessage("Product already in cart");
+      setAddToCartMessage(<Link to='/cart'> "Product already in cart"</Link>);
     
       console.log("Product already in cart");
     } else {
-      setAddToCartMessage("Product added to cart");
+      setAddToCartMessage( <Link to='/cart'>"Product added to cart "</Link>);
 
     
       console.log("Product added to cart", product);
@@ -59,16 +60,21 @@ function ViewProduct({  handleAddtoCart, handleAddtoWishlist }) {
 
  
   const addToWishlist = () => {
+    if(loginStatus === 'success'){
    const isAlreadyInWishList= handleAddtoWishlist(product);
     if (isAlreadyInWishList) {
+      setAddToCartWishListMessage(<Link to='/wishlist'>"Product alredy in wishlist "</Link>);
     
       console.log("Product already in wishlist");
     } else {
 
-    
+    setAddToCartWishListMessage(<Link to='/wishlist'>"Product added to Wishlist "</Link>)
       console.log("Product added to wishlist", product);
       
     }
+  }else{
+    setLoginStatus('failure')
+  }
   };
 
   return (
@@ -134,10 +140,19 @@ function ViewProduct({  handleAddtoCart, handleAddtoWishlist }) {
                  <div className="login-status">
           {addToCartMessage && <p style={{ color: "black" }}>{addToCartMessage}</p>}
                     {loginStatus === "failure" && (
-                      <Link to='/login' style={{ color: "black" }}>Please login to add to cart.</Link>
+                      <Link to='/login' style={{ color: "black" }}>Please login .</Link>
                     )}
                     
                   </div>
+
+                  {/* <div className="login-status">
+          {addToWishListMessage && <p style={{ color: "black" }}>{addToWishListMessage}</p>}
+                    {loginStatus === "failure" && (
+                      <Link to='/login' style={{ color: "black" }}>Please login to add to Wishlist.</Link>
+                    )} */}
+                    
+                  {/* </div> */}
+
                 </MDBCardBody>
               </MDBCol>
             </MDBRow>

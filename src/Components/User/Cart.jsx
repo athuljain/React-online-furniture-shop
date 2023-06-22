@@ -2,9 +2,15 @@
 
 import React, { useState } from "react";
 import "./Cart.css"
+import { Link } from "react-router-dom";
+import { CiCircleRemove } from "react-icons/ci";
 
-export default function Cart({ cartItems = [],handleAddToCart }) {
+export default function Cart({ cartItems = [],handleAddToCart, removeFromCart }) {
   const [quantities, setQuantities] = useState(cartItems.map(() => 1));
+
+  const handleRemoveFromCart=(itemId)=>{
+    removeFromCart(itemId)
+  }
 
   const incrementQuantity = (index) => {
     const newQuantities = [...quantities];
@@ -54,6 +60,12 @@ export default function Cart({ cartItems = [],handleAddToCart }) {
                   <button className="CartBtn" onClick={() => incrementQuantity(index)}>+</button>
                 </div>
               </div>
+              <div >
+                <Link className="remove-log" onClick={()=>handleRemoveFromCart(item.id)} >
+                  <CiCircleRemove />
+                </Link>
+
+                </div>
              
 
 

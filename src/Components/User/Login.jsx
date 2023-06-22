@@ -20,6 +20,7 @@ export default function Login() {
 
     if (user && user.password === password) {
       navigate("/");
+     
       setLoginStatus("success");
     } else {
       setLoginStatus("failure");

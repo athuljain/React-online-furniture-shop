@@ -27,6 +27,7 @@ function HeaderNavbar() {
           <div className="right-section">
             <Link className="login-logo" to="/login">
               <AiOutlineUser />
+              
             </Link>
 
             <Link className="wishlist-logo" to="/wishlist">
