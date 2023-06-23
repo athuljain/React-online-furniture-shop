@@ -36,7 +36,7 @@ function HeaderNavbar({ cartItems }) {
         <div className="Nav-bar">
           <div className="left-section">
             <input className="input-Search"  type="text" placeholder="Search" value={searchInput} onChange={(e)=> setSearchInput(e.target.value)} />
-            <Link to={handleSearch()} className="Search-btn">
+            <Link  to={handleSearch()} className="Search-btn linkWithoutDecoration">
               Search
             </Link>
           </div>
@@ -94,16 +94,16 @@ function HeaderNavbar({ cartItems }) {
                 <ul>
                   <li>
                     {" "}
-                    <Link to="/sofa">Sofa</Link>
+                    <Link className="linkWithoutDecoration" to="/sofa">Sofa</Link>
                   </li>
                   <li>
-                    <Link to="/table">Table</Link>
+                    <Link className="linkWithoutDecoration" to="/table">Table</Link>
                   </li>
                   <li>
-                    <Link to="/chair">Chair</Link>
+                    <Link className="linkWithoutDecoration" to="/chair">Chair</Link>
                   </li>
                   <li>
-                    <Link to="/bed">Bed</Link>
+                    <Link className="linkWithoutDecoration" to="/bed">Bed</Link>
                   </li>
                 </ul>
               </div>
@@ -137,7 +137,7 @@ function HeaderNavbar({ cartItems }) {
               Modular
             </a>
 
-            <Link className="service-text" to="/products">
+            <Link className="service-text linkWithoutDecoration" to="/products">
               All Products
             </Link>
           </div>
