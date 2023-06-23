@@ -1,7 +1,7 @@
 import React, { useState, useContext, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "./Login.css"
+import "./Login.css";
 
 import UserContext from "./UserContext";
 
@@ -10,18 +10,18 @@ export default function Login() {
 
   const navigate = useNavigate();
 
-  const { getUserByEmail,setLoginStatus,loginStatus } = useContext(UserContext);
+  const { getUserByEmail, setLoginStatus, loginStatus } =
+    useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
- //  const [loginStatus, setLoginStatus] = useState("");
-   
+  //  const [loginStatus, setLoginStatus] = useState("");
 
   const handleButtonClick = () => {
     const user = getUserByEmail(email);
 
     if (user && user.password === password) {
       navigate("/");
-     
+
       setLoginStatus("success");
     } else {
       setLoginStatus("failure");
@@ -60,7 +60,11 @@ export default function Login() {
             required
           />
           <br /> <br />
-          <button className="signin-btn" onClick={handleButtonClick} type="button">
+          <button
+            className="signin-btn"
+            onClick={handleButtonClick}
+            type="button"
+          >
             Sign In
           </button>
         </div>
@@ -69,8 +73,14 @@ export default function Login() {
           Don't have an account? <Link to="/register">Create</Link>
         </h6>
       </form>
-      {loginStatus === "success" && <p className="login-success">Login successful!</p>}
-      {loginStatus === "failure" && <p className="login-failure" style={{"color":"red"}}>Login failed. Please try again.</p>}
+      {loginStatus === "success" && (
+        <p className="login-success">Login successful!</p>
+      )}
+      {loginStatus === "failure" && (
+        <p className="login-failure" style={{ color: "red" }}>
+          Login failed. Please try again.
+        </p>
+      )}
     </div>
   );
 }
