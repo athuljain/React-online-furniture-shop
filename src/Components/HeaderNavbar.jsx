@@ -5,8 +5,15 @@ import { BsMinecart } from "react-icons/bs";
 import { GiSelfLove } from "react-icons/gi";
 import { AiOutlineUser } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { IoMdLogOut } from 'react-icons/io';
+import { useContext } from "react";
+import UserContext from "./User/UserContext";
+import Badge from 'react-bootstrap/Badge';
 
-function HeaderNavbar() {
+function HeaderNavbar({cartItems}) {
+
+  const {loginStatus}=useContext(UserContext)
+
   return (
     <Navbar expand="lg" variant="light" bg="light">
       <Container>
@@ -25,18 +32,24 @@ function HeaderNavbar() {
           </div>
 
           <div className="right-section">
-            <Link className="login-logo" to="/login">
-              <AiOutlineUser />
-              
-            </Link>
+          {loginStatus === "success" ? (
+        <Link className="login-logo" to="/register">
+          <IoMdLogOut />
+        </Link>
+      ) : (
+        <Link className="login-logo" to="/login">
+          <AiOutlineUser />
+        </Link>
+      )}
 
             <Link className="wishlist-logo" to="/wishlist">
               <GiSelfLove />
             </Link>
 
             <Link className="cart-logo" to="/cart">
-              <BsMinecart />
-            </Link>
+      <BsMinecart />
+      <Badge pill bg="secondary" className="cart-badge">{cartItems.length}</Badge>
+    </Link>
           </div>
         </div>
 

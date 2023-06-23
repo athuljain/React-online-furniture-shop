@@ -11,7 +11,7 @@ export default function UserRegister() {
   // useEffect(()=>{
   //     inputRef.current.focus()
   // })
-
+ 
   const navigate = useNavigate();
   
 
@@ -28,7 +28,7 @@ export default function UserRegister() {
       password,
     };
     addUser(userData);
-    setLoginStatus('success')
+   // setLoginStatus('success')
     navigate("/login");
     console.log(userData);
   };

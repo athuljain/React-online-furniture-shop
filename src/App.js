@@ -67,7 +67,7 @@ function App() {
     <div className="App">
       <UserProvider> 
       <Router>
-        {RenderHeaderAndFooter && <HeaderNavbar   /> } 
+        {RenderHeaderAndFooter && <HeaderNavbar cartItems={cartItems}  /> } 
         
         <Routes>
           <Route path="/login" element={<Login  />} />

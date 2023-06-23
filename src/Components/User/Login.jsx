@@ -10,10 +10,11 @@ export default function Login() {
 
   const navigate = useNavigate();
 
-  const { getUserByEmail } = useContext(UserContext);
+  const { getUserByEmail,setLoginStatus,loginStatus } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loginStatus, setLoginStatus] = useState("");
+ //  const [loginStatus, setLoginStatus] = useState("");
+   
 
   const handleButtonClick = () => {
     const user = getUserByEmail(email);
