@@ -6,22 +6,39 @@ import { GiSelfLove } from "react-icons/gi";
 import { AiOutlineUser } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { IoMdLogOut } from "react-icons/io";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import UserContext from "./User/UserContext";
 import Badge from "react-bootstrap/Badge";
 
+
 function HeaderNavbar({ cartItems }) {
   const { loginStatus } = useContext(UserContext);
+
+  const [searchInput,setSearchInput]=useState("")
+
+  function handleSearch() {
+    if (searchInput.toLowerCase().includes('sofa')) {
+      return '/sofa';
+    } else if (searchInput.toLowerCase().includes('chair')) {
+      return '/chair';
+    }else if (searchInput.toLowerCase().includes('table')) {
+      return '/table';
+    }
+    else if (searchInput.toLowerCase().includes('product')) {
+      return '/products';
+    }
+    
+  }
 
   return (
     <Navbar expand="lg" variant="light" bg="light">
       <Container>
         <div className="Nav-bar">
           <div className="left-section">
-            <input className="input-Search" type="text" placeholder="Search" />
-            <button className="Search-btn" type="submit">
+            <input className="input-Search"  type="text" placeholder="Search" value={searchInput} onChange={(e)=> setSearchInput(e.target.value)} />
+            <Link to={handleSearch()} className="Search-btn">
               Search
-            </button>
+            </Link>
           </div>
 
           <div className="center-section">
@@ -120,7 +137,7 @@ function HeaderNavbar({ cartItems }) {
               Modular
             </a>
 
-            <Link className="service-text" to="/Products">
+            <Link className="service-text" to="/products">
               All Products
             </Link>
           </div>
