@@ -163,11 +163,14 @@ function ViewProduct({ handleAddtoCart, handleAddtoWishlist }) {
                   </div>
 
                   <div className="login-status">
-          {addToWishListMessage && <p style={{ color: "black" }}>{addToWishListMessage}</p>}
-                    {loginStatus === "failure" && (
-                      <Link to='/login' style={{ color: "black" }}>Please login to add to Wishlist.</Link>
+                    {addToWishListMessage && (
+                      <p style={{ color: "black" }}>{addToWishListMessage}</p>
                     )}
-
+                    {loginStatus === "failure" && (
+                      <Link to="/login" style={{ color: "black" }}>
+                        Please login to add to Wishlist.
+                      </Link>
+                    )}
                   </div>
                 </MDBCardBody>
               </MDBCol>

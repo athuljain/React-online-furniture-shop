@@ -10,24 +10,21 @@ import { useContext, useState } from "react";
 import UserContext from "./User/UserContext";
 import Badge from "react-bootstrap/Badge";
 
-
 function HeaderNavbar({ cartItems }) {
   const { loginStatus } = useContext(UserContext);
 
-  const [searchInput,setSearchInput]=useState("")
+  const [searchInput, setSearchInput] = useState("");
 
   function handleSearch() {
-    if (searchInput.toLowerCase().includes('sofa')) {
-      return '/sofa';
-    } else if (searchInput.toLowerCase().includes('chair')) {
-      return '/chair';
-    }else if (searchInput.toLowerCase().includes('table')) {
-      return '/table';
+    if (searchInput.toLowerCase().includes("sofa")) {
+      return "/sofa";
+    } else if (searchInput.toLowerCase().includes("chair")) {
+      return "/chair";
+    } else if (searchInput.toLowerCase().includes("table")) {
+      return "/table";
+    } else if (searchInput.toLowerCase().includes("product")) {
+      return "/products";
     }
-    else if (searchInput.toLowerCase().includes('product')) {
-      return '/products';
-    }
-    
   }
 
   return (
@@ -35,8 +32,17 @@ function HeaderNavbar({ cartItems }) {
       <Container>
         <div className="Nav-bar">
           <div className="left-section">
-            <input className="input-Search"  type="text" placeholder="Search" value={searchInput} onChange={(e)=> setSearchInput(e.target.value)} />
-            <Link  to={handleSearch()} className="Search-btn linkWithoutDecoration">
+            <input
+              className="input-Search"
+              type="text"
+              placeholder="Search"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+            />
+            <Link
+              to={handleSearch()}
+              className="Search-btn linkWithoutDecoration"
+            >
               Search
             </Link>
           </div>
@@ -94,16 +100,24 @@ function HeaderNavbar({ cartItems }) {
                 <ul>
                   <li>
                     {" "}
-                    <Link className="linkWithoutDecoration" to="/sofa">Sofa</Link>
+                    <Link className="linkWithoutDecoration" to="/sofa">
+                      Sofa
+                    </Link>
                   </li>
                   <li>
-                    <Link className="linkWithoutDecoration" to="/table">Table</Link>
+                    <Link className="linkWithoutDecoration" to="/table">
+                      Table
+                    </Link>
                   </li>
                   <li>
-                    <Link className="linkWithoutDecoration" to="/chair">Chair</Link>
+                    <Link className="linkWithoutDecoration" to="/chair">
+                      Chair
+                    </Link>
                   </li>
                   <li>
-                    <Link className="linkWithoutDecoration" to="/bed">Bed</Link>
+                    <Link className="linkWithoutDecoration" to="/bed">
+                      Bed
+                    </Link>
                   </li>
                 </ul>
               </div>
