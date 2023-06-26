@@ -16,6 +16,7 @@ import { useState } from 'react';
 import Wishlist from './Components/User/WishList';
 import AdminBody from './Components/Admin/AdminBody';
 import { UserProvider } from './Components/User/UserContext';
+import AdminProducts from './Components/Admin/AdminProduct';
 //import { products } from './Components/User/products';
 
 function App() {
@@ -81,7 +82,9 @@ function App() {
           <Route path='/products/:productId'  element={< ViewProduct  handleAddtoCart={handleAddtoCart} handleAddtoWishlist={handleAddtoWishlist} />} />
           <Route path='/cart' element={< Cart cartItems={cartItems} removeFromCart={removeFromCart} />} />
           <Route path='/wishlist' element={<Wishlist wishlistItems={wishlistItems} removeFromWishList={removeFromWishList} />} />
+
           <Route path='/admin' element={ <AdminBody />} />
+          <Route path='/admin/product' element={ <AdminProducts />} />
         </Routes>
         {RenderHeaderAndFooter && <Footer /> } 
         

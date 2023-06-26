@@ -8,7 +8,7 @@ export default function AdminBody() {
         <h1 className="Admin-Heading">admin</h1>
         <div className="Left-Side-Admin-details">
           <Link to="/admin/users">Users</Link> <br />
-          <Link to="/admin/products">Products</Link>
+          <Link to="/admin/product">Products</Link>
         </div>
       </div>
 
