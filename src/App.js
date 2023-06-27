@@ -14,9 +14,11 @@ import Footer from './Components/Footer';
 import Cart from './Components/User/Cart';
 import { useState } from 'react';
 import Wishlist from './Components/User/WishList';
-import AdminBody from './Components/Admin/AdminBody';
+
 import { UserProvider } from './Components/User/UserContext';
 import AdminProducts from './Components/Admin/AdminProduct';
+import AdminSidebar from './Components/Admin/AdminSideBar';
+import AdminAddProduct from './Components/Admin/AdminAddProduct';
 //import { products } from './Components/User/products';
 
 function App() {
@@ -83,8 +85,13 @@ function App() {
           <Route path='/cart' element={< Cart cartItems={cartItems} removeFromCart={removeFromCart} />} />
           <Route path='/wishlist' element={<Wishlist wishlistItems={wishlistItems} removeFromWishList={removeFromWishList} />} />
 
-          <Route path='/admin' element={ <AdminBody />} />
-          <Route path='/admin/product' element={ <AdminProducts />} />
+          {/* <Route path='/admin' element={ <AdminBody />} /> */}
+          {/* <Route path='/admin/product' element={ <AdminProducts />} /> */}
+
+          <Route element={<AdminSidebar /> }>
+            <Route path='/admin/products' element={<AdminProducts />}></Route>
+            <Route path='/admin/addproducts' element ={<AdminAddProduct />}></Route>
+          </Route>
         </Routes>
         {RenderHeaderAndFooter && <Footer /> } 
         
