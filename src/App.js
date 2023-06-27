@@ -19,6 +19,9 @@ import { UserProvider } from './Components/User/UserContext';
 import AdminProducts from './Components/Admin/AdminProduct';
 import AdminSidebar from './Components/Admin/AdminSideBar';
 import AdminAddProduct from './Components/Admin/AdminAddProduct';
+import UserAdmin from './Components/Admin/UserAdmin';
+import UserLogindata from './Components/Admin/UserLogindata';
+import AdminEdit from './Components/Admin/AdminEdit';
 //import { products } from './Components/User/products';
 
 function App() {
@@ -27,6 +30,7 @@ function App() {
 
   const [cartItems, setCartItems] = useState([]);
   const [wishlistItems, setWishlistItems] = useState([]);
+  // const [admin,setAdmin]=useState({username:"admin",password:"admin"})
 //  const [userLoginStatus,setUserLoginStatus]=useState(null)
   
 
@@ -88,9 +92,13 @@ function App() {
           {/* <Route path='/admin' element={ <AdminBody />} /> */}
           {/* <Route path='/admin/product' element={ <AdminProducts />} /> */}
 
-          <Route element={<AdminSidebar /> }>
+          <Route path='/admin' element={<AdminSidebar /> }>
             <Route path='/admin/products' element={<AdminProducts />}></Route>
-            <Route path='/admin/addproducts' element ={<AdminAddProduct />}></Route>
+            {/* <Route path='/admin/user' element={<UserAdmin />}></Route> */}
+            {/* <Route path='/admin/logindata' element={<UserLogindata />}></Route> */}
+            {/* <Route path='/admin/addproducts' element ={<AdminAddProduct />}></Route> */}
+            {/* <Route path='/admin/productedit/:id' element={<AdminEdit />}></Route> */}
+
           </Route>
         </Routes>
         {RenderHeaderAndFooter && <Footer /> } 

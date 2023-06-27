@@ -1,11 +1,12 @@
 import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import UserContext from "../User/UserContext"
+import { Button,Image } from "bootstrap"
 
 const AdminProducts=()=>{
 
   const navigate=useNavigate()
-  const productData=useContext(UserContext)
+  const productsData=useContext(UserContext)
   const {products,setProducts,searchProducts,setSearchProducts}=productsData
   // console.log(products);
 const details=products.filter((item)=>(item))
@@ -109,4 +110,3 @@ setSearchProducts((e.target.value).toLowerCase())
 
 export default AdminProducts
  
-}
