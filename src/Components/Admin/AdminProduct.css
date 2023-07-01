@@ -1,0 +1,33 @@
+.admin-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    color: black;
+  }
+  
+  .admin-product h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .admin-product img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .admin-product p {
+    margin-bottom: 5px;
+    color: black;
+  }
+  
+  .admin-product button {
+    margin-right: 10px;
+    color: black;
+  }
+  

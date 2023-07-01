@@ -15,12 +15,14 @@ export const UserProvider = ({ children }) => {
   };
 
   const [loginStatus,setLoginStatus] = useState("")
-
+  const [products, setProducts] = useState([]);
   const value = {
     addUser,
     getUserByEmail,
     loginStatus,
     setLoginStatus,
+    products,
+    setProducts
   };
 
  

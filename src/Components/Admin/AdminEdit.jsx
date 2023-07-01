@@ -1,83 +1,60 @@
-// import React,{useContext,useEffect,useRef} from "react"
-// import { useNavigate,useParams } from "react-router-dom"
-// import {UserContext} from '../../Components/User/UserContext'
-// import {Form,Button} from 'react-bootstrap'
+import React, { useContext, useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import UserContext from "../User/UserContext";
+import { products } from "../User/products";
 
+const AdminEdit = () => {
+  const { productId } = useParams(); // Retrieve the productId from URL parameters
+  const { setProducts } = useContext(UserContext);
+  const [product, setProduct] = useState(null);
+  const navigate=useNavigate()
 
-
-// const AdminEdit=()=>{
-//     const{products,setProducts}=useContext(UserContext)
-//     const {id}=useParams()
-//     const Navigate=useNavigate()
-//     const edit=products.filter((item)=>item.id===parseInt(id))
-//     const [edited]=edit
-//     console.log(edit);
-//     console.log(edited);
-
-//     const inputRef=useRef(edited)
-
-//     const editHandler=()=>{
-//         const id=parseInt(inputRef.current.Id.value)
-//         const title=inputRef.current.Title.value 
-//         const image=inputRef.current.Image.value 
-//         const category=inputRef.current.Category.value
-//         const price=inputRef.current.Price.value 
-//         const qty=inputRef.current.Qty.value 
-
-//         const updated=products.filter((item)=>item.id !== edited.id)
-
-//         const newDetails=({id,title,image,category,price,qty,})
-
-//        setProducts([...updated,newDetails])
-
-//        Navigate('/admin/products')
-//        alert('product edited succesfully')
-//     }
-
-//     return (
-//         <div>{edit.map((item)=>
-//             <div key={item.id}>
-//             <Form  ref={inputRef} onSubmit={e=>e.preventDefault()}>
-//             <Form.Group className="mb-3" controlId="formBasicEmail" >
-//               <Form.Label>Id</Form.Label>
-//               <Form.Control  name='Id' type="text" value={item.id}  placeholder="Enter id" />
-//             </Form.Group>
-            
-//             <Form.Group className="mb-3" >
-//               <Form.Label>Title</Form.Label>
-//               <Form.Control   name='Title' type="text" defaultValue={item.title}  placeholder="Enter title" />
-//             </Form.Group>
-//             <Form.Group className="mb-3" >
-//                 <Form.Label>Image</Form.Label>
-//                 <Form.Control  name='Image' type="text" defaultValue={item.image}  placeholder="Add image" />
-//               </Form.Group>
-               
-//               <Form.Group className="mb-3" >
-//                 <Form.Label>Category</Form.Label>
-//                 <Form.Control   name='Category' type="text" defaultValue={item.Category}   placeholder="Category" />
-//               </Form.Group>
-            
-//               <Form.Group className="mb-3" >
-//                 <Form.Label>Price</Form.Label>
-//                 <Form.Control  name='Price' type="text" defaultValue={item.price}   placeholder="price" />
-//               </Form.Group>
-//               <Form.Group className="mb-3" controlId="formBasicPassword">
-//                 <Form.Label>Quantity</Form.Label>
-//                 <Form.Control  name='Qty' type="text" defaultValue={item.qty}    placeholder="quantity" />
-//               </Form.Group>
-             
-//               <Form.Group className="mb-3" controlId="formBasicCheckbox" >
-//                 <Form.Check type="checkbox" label="Check me out" />
-//               </Form.Group>
-//               <Button variant="primary" type="submit" onClick={editHandler} >
-//                 Submit
-//               </Button>
-              
-//             </Form>
-            
-//             </div>
-//             )}</div>
-//       )
-//     }
+  useEffect(() => {
     
-//     export default AdminEdit
+    const fetchedProduct = products.find((product) => product.id === parseInt(productId) );
+    setProduct(fetchedProduct);
+  }, [productId]);
+
+  const handleSave = (updatedProduct) => {
+    // Update the product in the products array
+    const updatedProducts = products.map((product) =>
+      product.id === parseInt(productId) ? updatedProduct : product
+    );
+    setProducts(updatedProducts);
+
+    console.log(updatedProduct);
+  
+    // Redirect back to the product list
+    navigate('/admin/products');
+  };
+
+  if (!product) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div>
+      <h1>Edit Product</h1>
+      <form>
+        <label>Title:</label>
+        <input type="text" value={product.title} onChange={(e) => setProduct({ ...product, title: e.target.value })} />
+
+        <label>Image:</label>
+        <input type="text" value={product.image} onChange={(e) => setProduct({ ...product, image: e.target.value })} />
+
+        <label>Category:</label>
+        <input type="text" value={product.category} onChange={(e) => setProduct({ ...product, category: e.target.value })} />
+
+        <label>Price:</label>
+        <input type="text" value={product.price} onChange={(e) => setProduct({ ...product, price: e.target.value })} />
+
+        <label>Quantity:</label>
+        <input type="text" value={product.qty} onChange={(e) => setProduct({ ...product, qty: e.target.value })} />
+
+        <button type="button" onClick={() => handleSave(product)}>Save</button>
+      </form>
+    </div>
+  );
+};
+
+export default AdminEdit;

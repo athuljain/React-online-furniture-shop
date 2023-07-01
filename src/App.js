@@ -16,12 +16,13 @@ import { useState } from 'react';
 import Wishlist from './Components/User/WishList';
 
 import { UserProvider } from './Components/User/UserContext';
-import AdminProducts from './Components/Admin/AdminProduct';
+import AdminProduct from './Components/Admin/AdminProduct';
 import AdminSidebar from './Components/Admin/AdminSideBar';
 import AdminAddProduct from './Components/Admin/AdminAddProduct';
 import UserAdmin from './Components/Admin/UserAdmin';
 import UserLogindata from './Components/Admin/UserLogindata';
 import AdminEdit from './Components/Admin/AdminEdit';
+import AdminLogin from './Components/Admin/AdminLogin';
 //import { products } from './Components/User/products';
 
 function App() {
@@ -91,13 +92,14 @@ function App() {
 
           {/* <Route path='/admin' element={ <AdminBody />} /> */}
           {/* <Route path='/admin/product' element={ <AdminProducts />} /> */}
-
+          <Route path='/adminlogin' element={<AdminLogin /> }></Route>
           <Route path='/admin' element={<AdminSidebar /> }>
-            <Route path='/admin/products' element={<AdminProducts />}></Route>
+            
+            <Route path='/admin/products' element={<AdminProduct />}></Route>
             {/* <Route path='/admin/user' element={<UserAdmin />}></Route> */}
             {/* <Route path='/admin/logindata' element={<UserLogindata />}></Route> */}
             {/* <Route path='/admin/addproducts' element ={<AdminAddProduct />}></Route> */}
-            {/* <Route path='/admin/productedit/:id' element={<AdminEdit />}></Route> */}
+            <Route path='/admin/edit/:productId' element={<AdminEdit />}></Route>
 
           </Route>
         </Routes>

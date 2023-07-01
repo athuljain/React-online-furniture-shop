@@ -6,6 +6,7 @@ import { GiSelfLove } from "react-icons/gi";
 import { AiOutlineUser } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { IoMdLogOut } from "react-icons/io";
+import {GrUserAdmin} from "react-icons/gr"
 import { useContext, useState } from "react";
 import UserContext from "./User/UserContext";
 import Badge from "react-bootstrap/Badge";
@@ -73,6 +74,9 @@ function HeaderNavbar({ cartItems }) {
               <Badge pill bg="secondary" className="cart-badge">
                 {cartItems.length}
               </Badge>
+            </Link>
+            <Link className="admin-logo" to='/adminlogin'>
+             <GrUserAdmin />
             </Link>
           </div>
         </div>
