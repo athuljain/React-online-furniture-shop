@@ -1,70 +1,81 @@
-// import React,{useContext,useRef} from "react"
-// import  {Button}  from "bootstrap"
-// import  Form  from "react-bootstrap/Form"
+import React, { useState } from "react";
+import { Form, Button } from "react-bootstrap";
+import { products } from "../User/products";
 
-// import UserContext from "../User/UserContext"
-// import { useNavigate } from "react-router-dom"
+export default function AdminAddProduct({ handleAddProduct }) {
+  const [newProduct, setNewProduct] = useState({
+    id: "",
+    title: "",
+    image: "",
+    category: "",
+    price: 0,
+    qty: 1
+  });
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    handleAddProduct(newProduct);
+    setNewProduct({
+      id: "",
+      title: "",
+      image: "",
+      category: "",
+      price: 0,
+      qty: 1
+    });
+    products.push(newProduct)
+  };
 
-// export default function AdminAddProduct(){
-//     const navigate=useNavigate()
-//     const inputRef=useRef(null)
-//     const {products,setProducts}=useContext(UserContext)
-
-
-//     const submitHandler=()=>{
-//         const id=parseInt(inputRef.current.Id.value)
-//         const title=inputRef.current.Title.value 
-//         const image=inputRef.current.Image.value 
-//         const category=inputRef.current.Category.value
-//         const price=inputRef.current.Price.value 
-//         const qty=inputRef.current.Qty.value 
-//         setProducts([...products,{id,title,image,category,price,qty,}])
-//         console.log(products);
-
-//         navigate('/admin/products')
-//     }
-
-//     return(
-//         <div>
-//     <Form ref={inputRef} onSubmit={e=>e.preventDefault()}>
-//     <Form.Group className="mb-3" controlId="formBasicEmail" >
-//       <Form.Label>Id</Form.Label>
-//       <Form.Control name='Id' type="text" placeholder="Enter id" />
-//     </Form.Group>
-
-//     <Form.Group className="mb-3" >
-//       <Form.Label>Title</Form.Label>
-//       <Form.Control name='Title' type="text" placeholder="Enter title" />
-//     </Form.Group>
-//     <Form.Group className="mb-3" >
-//     <Form.Label>Image</Form.Label>
-//         <Form.Control name='Image' type="text" placeholder="Add image" />
-//       </Form.Group>
-
-//       <Form.Group className="mb-3" >
-//         <Form.Label>Category</Form.Label>
-//         <Form.Control name='Category' type="text" placeholder="Category" />
-//       </Form.Group>
-    
-//       <Form.Group className="mb-3" >
-//         <Form.Label>Price</Form.Label>
-//         <Form.Control name='Price' type="text" placeholder="price" />
-//       </Form.Group>
-//       <Form.Group className="mb-3" controlId="formBasicPassword">
-//         <Form.Label>Quantity</Form.Label>
-//         <Form.Control name='Qty' type="text" placeholder="quantity" />
-//       </Form.Group>
-      
-
-     
-//       <Form.Group className="mb-3" controlId="formBasicCheckbox" >
-//         <Form.Check type="checkbox" label="Check me out" />
-//       </Form.Group>
-//       <Button variant="primary" type="submit" onClick={submitHandler}>
-//         Submit
-//       </Button>
-//     </Form>
-//     </div>
-//     )
-// }
+  return (
+    <div>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="title">
+          <Form.Label>Title</Form.Label>
+          <Form.Control
+            type="text"
+            value={newProduct.title}
+            onChange={(e) => setNewProduct({ ...newProduct, title: e.target.value })}
+            required
+          />
+        </Form.Group>
+        <Form.Group controlId="image">
+          <Form.Label>Image URL</Form.Label>
+          <Form.Control
+            type="text"
+            value={newProduct.image}
+            onChange={(e) => setNewProduct({ ...newProduct, image: e.target.value })}
+            required
+          />
+        </Form.Group>
+        <Form.Group controlId="category">
+          <Form.Label>Category</Form.Label>
+          <Form.Control
+            type="text"
+            value={newProduct.category}
+            onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })}
+            required
+          />
+        </Form.Group>
+        <Form.Group controlId="price">
+          <Form.Label>Price</Form.Label>
+          <Form.Control
+            type="number"
+            value={newProduct.price}
+            onChange={(e) => setNewProduct({ ...newProduct, price: parseInt(e.target.value) })}
+            required
+          />
+        </Form.Group>
+        <Form.Group controlId="qty">
+          <Form.Label>Quantity</Form.Label>
+          <Form.Control
+            type="number"
+            value={newProduct.qty}
+            onChange={(e) => setNewProduct({ ...newProduct, qty: parseInt(e.target.value) })}
+            required
+          />
+        </Form.Group>
+        <Button type="submit">Add</Button>
+      </Form>
+    </div>
+  );
+}

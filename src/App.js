@@ -23,6 +23,7 @@ import UserAdmin from './Components/Admin/UserAdmin';
 import UserLogindata from './Components/Admin/UserLogindata';
 import AdminEdit from './Components/Admin/AdminEdit';
 import AdminLogin from './Components/Admin/AdminLogin';
+import { products } from './Components/User/products';
 //import { products } from './Components/User/products';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
 
   const [cartItems, setCartItems] = useState([]);
   const [wishlistItems, setWishlistItems] = useState([]);
+  const [products, setProducts] = useState([]);
   // const [admin,setAdmin]=useState({username:"admin",password:"admin"})
 //  const [userLoginStatus,setUserLoginStatus]=useState(null)
   
@@ -67,7 +69,11 @@ function App() {
     setCartItems(updatedCartItems)
   }
 
+  const handleAddProduct=(newProduct) =>{
+    setProducts([...products,newProduct])
+  }
   
+
   
   const RenderHeaderAndFooter = location.path !== "/admin";
 
@@ -98,7 +104,7 @@ function App() {
             <Route path='/admin/products' element={<AdminProduct />}></Route>
             {/* <Route path='/admin/user' element={<UserAdmin />}></Route> */}
             {/* <Route path='/admin/logindata' element={<UserLogindata />}></Route> */}
-            {/* <Route path='/admin/addproducts' element ={<AdminAddProduct />}></Route> */}
+            <Route path='/admin/addproduct' element ={<AdminAddProduct handleAddProduct={handleAddProduct} />}></Route>
             <Route path='/admin/edit/:productId' element={<AdminEdit />}></Route>
 
           </Route>

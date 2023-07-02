@@ -3,9 +3,13 @@ import UserContext from "../User/UserContext";
 import { Image, Button } from "react-bootstrap";
 import { products } from "../User/products";
 import "./AdminProduct.css";
+import { useNavigate } from "react-router-dom";
+
 
 const AdminProduct = () => {
   const { setProducts } = useContext(UserContext);
+
+ const navigate=useNavigate()
 
   const handleEdit = (productId) => {
     // Construct the edit URL with the productId as a parameter
@@ -15,6 +19,11 @@ const AdminProduct = () => {
     window.location.href = editUrl;
   };
 
+  const handleAddProduct=()=>{
+    navigate("/admin/addproduct")
+  }
+
+
   const handleDelete = (productId) => {
     const updatedProducts = products.filter((product) => product.id !== productId);
     setProducts(updatedProducts);
@@ -22,6 +31,11 @@ const AdminProduct = () => {
 
   return (
     <div className="admin-product">
+      <div>
+        <Button onClick={handleAddProduct} >Add Product
+          
+        </Button>
+      </div>
       {products.map((product) => (
         <div key={product.id}>
           <h3>{product.title}</h3>
