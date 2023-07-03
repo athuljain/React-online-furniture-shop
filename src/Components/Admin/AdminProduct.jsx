@@ -7,16 +7,16 @@ import { useNavigate } from "react-router-dom";
 
 
 const AdminProduct = () => {
-  const { setProducts } = useContext(UserContext);
-
+  const { products,setProducts } = useContext(UserContext);
+console.log(products);
  const navigate=useNavigate()
 
   const handleEdit = (productId) => {
-    // Construct the edit URL with the productId as a parameter
-    const editUrl = `/admin/edit/${productId}`;
+  navigate(`/admin/edit/${productId}`)
+    // const editUrl = `/admin/edit/${productId}`;
 
-    // Redirect to the edit page
-    window.location.href = editUrl;
+    
+    // window.location.href = editUrl;
   };
 
   const handleAddProduct=()=>{

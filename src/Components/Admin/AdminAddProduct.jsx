@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { products } from "../User/products";
+import UserContext from "../User/UserContext";
 
 export default function AdminAddProduct({ handleAddProduct }) {
   const [newProduct, setNewProduct] = useState({
@@ -12,9 +13,12 @@ export default function AdminAddProduct({ handleAddProduct }) {
     qty: 1
   });
 
+  const {products,setProducts}=useContext(UserContext)
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    handleAddProduct(newProduct);
+    const updatedProducts = [...products, newProduct];
+    setProducts(updatedProducts);
     setNewProduct({
       id: "",
       title: "",
@@ -23,7 +27,6 @@ export default function AdminAddProduct({ handleAddProduct }) {
       price: 0,
       qty: 1
     });
-    products.push(newProduct)
   };
 
   return (

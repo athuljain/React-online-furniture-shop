@@ -15,12 +15,13 @@ const AdminEdit = () => {
     setProduct(fetchedProduct);
   }, [productId]);
 
-  const handleSave = (updatedProduct) => {
-    // Update the product in the products array
-    const updatedProducts = products.map((product) =>
-      product.id === parseInt(productId) ? updatedProduct : product
-    );
-    setProducts(updatedProducts);
+  
+   
+    const handleSave = (updatedProduct) => {
+      const updatedProducts = products.map((p) =>
+        p.id === parseInt(productId) ? updatedProduct : p
+      );
+      setProducts(updatedProducts);
 
     console.log(updatedProduct);
   
