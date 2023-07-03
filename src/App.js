@@ -102,8 +102,8 @@ function App() {
           <Route path='/admin' element={<AdminSidebar /> }>
             
             <Route path='/admin/products' element={<AdminProduct />}></Route>
-            {/* <Route path='/admin/user' element={<UserAdmin />}></Route> */}
-            {/* <Route path='/admin/logindata' element={<UserLogindata />}></Route> */}
+            <Route path='/admin/user' element={<UserAdmin />}></Route>
+           
             <Route path='/admin/addproduct' element ={<AdminAddProduct handleAddProduct={handleAddProduct} />}></Route>
             <Route path='/admin/edit/:productId' element={<AdminEdit  setProducts={setProducts}/>}></Route>
 

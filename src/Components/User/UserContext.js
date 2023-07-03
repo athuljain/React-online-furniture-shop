@@ -22,7 +22,8 @@ export const UserProvider = ({ children }) => {
     loginStatus,
     setLoginStatus,
     products,
-    setProducts
+    setProducts,
+    registeredUsers,
   };
 
  
