@@ -11,6 +11,8 @@ import { useContext, useState } from "react";
 import UserContext from "./User/UserContext";
 import Badge from "react-bootstrap/Badge";
 
+
+
 function HeaderNavbar({ cartItems }) {
   const { loginStatus } = useContext(UserContext);
 

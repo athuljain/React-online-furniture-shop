@@ -13,12 +13,12 @@ import {
   } from 'mdb-react-ui-kit';
 import UserContext from './UserContext';
 export default function Chair(){
-  const {products} = useContext(UserContext)
-    const [chairProducts,setChairProducts]=useState([])
+  const {products,setProducts} = useContext(UserContext)
+    // const [chairProducts,setChairProducts]=useState([])
 
     useState(() => {
         const filteredProducts = products.filter((product) => product.category === 'Chair');
-        setChairProducts(filteredProducts);
+        setProducts(filteredProducts);
       }, []);
 
     return(
@@ -27,7 +27,7 @@ export default function Chair(){
                 <h1>Chair</h1>
             </div>
             <div className="Chair-ProductsList">
-                {chairProducts.map((product)=>(
+                {products.map((product)=>(
                  <Link to={`/products/${product.id}`} key={product.id} className='linkWithoutDecoration' >
               <div className='Chair-cardproduct'>
             <MDBCardImage className='Chair-ProductsImg' src={product.image} position='top' alt='...' />

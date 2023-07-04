@@ -44,6 +44,15 @@ export default function AdminAddProduct({ handleAddProduct }) {
   return (
     <div className="add-product-container">
       <Form onSubmit={handleSubmit}>
+      <Form.Group controlId="title">
+          <Form.Label>Id</Form.Label>
+          <Form.Control
+            type="text"
+            value={newProduct.id}
+            onChange={(e) => setNewProduct({ ...newProduct, id: e.target.value })}
+            required
+          />
+        </Form.Group>
         <Form.Group controlId="title">
           <Form.Label>Title</Form.Label>
           <Form.Control

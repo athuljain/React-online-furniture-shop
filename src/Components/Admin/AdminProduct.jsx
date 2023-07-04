@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const AdminProduct = () => {
   const {setProducts ,products} = useContext(UserContext);
-  console.warn(products);
+ // console.warn(products);
   // const [productList,setProductList]=useState(products)
 // console.log(productList);
 console.log("hello");
