@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./Bed.css";
-import { products } from "./products";
+// import { products } from "./products";
 import "./Products.css";
 import { Link } from "react-router-dom";
 import {
@@ -9,16 +9,22 @@ import {
   MDBCardText,
   MDBCardImage,
 } from "mdb-react-ui-kit";
+import UserContext from "./UserContext";
 export default function Bed() {
-  const filteredProducts = products.filter(
-    (product) => product.category === "Bed"
-  );
-  console.log(filteredProducts);
+  const {products} = useContext(UserContext)
+  console.log(products);
+  const [bedProducts,setBedProducts]=useState([])
+
+  useState(() => {
+    const filteredProducts = products.filter((product) => product.category === "Bed");
+    setBedProducts(filteredProducts);
+  }, []);
+
   return (
     <div className="Bed-Products">
       <h1>Bed</h1>
       <div className="Bed-productsList">
-        {filteredProducts.map((product) => (
+        {bedProducts.map((product) => (
           <Link
             to={`/products/${product.id}`}
             key={product.id}

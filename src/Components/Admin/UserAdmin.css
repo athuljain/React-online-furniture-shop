@@ -1,0 +1,27 @@
+.user-admin-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .user-admin-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-admin-container div {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .user-admin-container p {
+    margin: 0;
+    padding: 5px 0;
+  }
+  
+  .user-admin-container p:first-child {
+    font-weight: bold;
+  }
+  

@@ -20,10 +20,10 @@ import AdminProduct from './Components/Admin/AdminProduct';
 import AdminSidebar from './Components/Admin/AdminSideBar';
 import AdminAddProduct from './Components/Admin/AdminAddProduct';
 import UserAdmin from './Components/Admin/UserAdmin';
-import UserLogindata from './Components/Admin/UserLogindata';
+
 import AdminEdit from './Components/Admin/AdminEdit';
 import AdminLogin from './Components/Admin/AdminLogin';
-import { products } from './Components/User/products';
+import { product } from './Components/User/producttt';
 //import { products } from './Components/User/products';
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
 
   const [cartItems, setCartItems] = useState([]);
   const [wishlistItems, setWishlistItems] = useState([]);
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(product);
   // const [admin,setAdmin]=useState({username:"admin",password:"admin"})
 //  const [userLoginStatus,setUserLoginStatus]=useState(null)
   

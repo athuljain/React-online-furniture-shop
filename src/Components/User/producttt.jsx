@@ -1,4 +1,4 @@
-export const products = [
+export const product = [
     {
       id: 1,
       title: "Milton Velvet 3 Seater Sofa in Grey Colour,",

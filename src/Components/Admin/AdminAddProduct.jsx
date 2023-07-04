@@ -1,9 +1,16 @@
-import React, { useCallback, useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import { products } from "../User/products";
 import UserContext from "../User/UserContext";
+import "./AdminAddProduct.css"
+// import { products } from "../User/products"; 
+import { useNavigate } from "react-router-dom";
 
 export default function AdminAddProduct({ handleAddProduct }) {
+  //const  product = useContext(UserContext)
+  
+
+  const {products,setProducts,}=useContext(UserContext)
+
   const [newProduct, setNewProduct] = useState({
     id: "",
     title: "",
@@ -12,13 +19,16 @@ export default function AdminAddProduct({ handleAddProduct }) {
     price: 0,
     qty: 1
   });
+  const navigate=useNavigate()
+  
 
-  const {products,setProducts}=useContext(UserContext)
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const updatedProducts = [...products, newProduct];
     setProducts(updatedProducts);
+    console.log(updatedProducts);
+   // console.log("adminadd",product);
     setNewProduct({
       id: "",
       title: "",
@@ -27,10 +37,12 @@ export default function AdminAddProduct({ handleAddProduct }) {
       price: 0,
       qty: 1
     });
+    navigate('/admin/products')
+
   };
 
   return (
-    <div>
+    <div className="add-product-container">
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="title">
           <Form.Label>Title</Form.Label>

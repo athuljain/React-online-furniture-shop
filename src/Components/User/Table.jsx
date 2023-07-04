@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./Table.css";
-import { products } from "./products";
+// import { products } from "./products";
 import "./Products.css";
 import { Link } from "react-router-dom";
 import {
@@ -9,16 +9,22 @@ import {
   MDBCardText,
   MDBCardImage,
 } from "mdb-react-ui-kit";
+import UserContext from "./UserContext";
 export default function Table() {
-  const filteredProducts = products.filter(
-    (product) => product.category === "Table"
-  );
-  console.log(filteredProducts);
+  const {products} = useContext(UserContext)
+  const [tableProducts,setTableProducts]=useState([])
+
+useState(()=>{
+  const filteredProducts=products.filter((product)=> product.category==="Table")
+  setTableProducts(filteredProducts)
+},[])
+
+  
   return (
     <div className="Table-Products">
       <h1>Table</h1>
       <div className="Table-productsList">
-        {filteredProducts.map((product) => (
+        {tableProducts.map((product) => (
           <Link
             to={`/products/${product.id}`}
             key={product.id}

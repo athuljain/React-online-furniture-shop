@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./Sofa.css";
-import { products } from "./products";
+
 import "./Products.css";
 import { Link } from "react-router-dom";
 import {
@@ -9,16 +9,24 @@ import {
   MDBCardText,
   MDBCardImage,
 } from "mdb-react-ui-kit";
+import UserContext from "./UserContext";
 export default function Sofa() {
-  const filteredProducts = products.filter(
-    (product) => product.category === "Sofa"
-  );
-  console.log(filteredProducts);
+  const {products} = useContext(UserContext)
+
+  const [sofaProducts,setSofaProducts]=useState([])
+
+
+
+  useState(() => {
+    const filteredProducts = products.filter((product) => product.category === 'Sofa');
+    setSofaProducts(filteredProducts);
+  }, []);
+
   return (
     <div className="Sofa-Products">
       <h1>Sofa</h1>
       <div className="Sofa-productsList">
-        {filteredProducts.map((product) => (
+        {sofaProducts.map((product) => (
           <Link
             to={`/products/${product.id}`}
             key={product.id}

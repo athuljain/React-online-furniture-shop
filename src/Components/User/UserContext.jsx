@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import { product } from "./producttt";
 
 const UserContext = createContext();
 
@@ -15,7 +16,7 @@ export const UserProvider = ({ children }) => {
   };
 
   const [loginStatus,setLoginStatus] = useState("")
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(product);
   const value = {
     addUser,
     getUserByEmail,

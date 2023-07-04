@@ -26,6 +26,9 @@ function HeaderNavbar({ cartItems }) {
     } else if (searchInput.toLowerCase().includes("product")) {
       return "/products";
     }
+    else if (searchInput.toLowerCase().includes("bed")) {
+      return "/bed";
+    }
   }
 
   return (

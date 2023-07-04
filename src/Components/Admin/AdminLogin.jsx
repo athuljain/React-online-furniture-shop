@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
+import "./AdminLogin.css"
 
 
 
@@ -21,7 +22,7 @@ export default function AdminLogin() {
     };
   
     return (
-      <div>
+      <div className="admin-login-container">
         <h1>Admin Login</h1>
         <input
           type="text"

@@ -1,5 +1,4 @@
-import React from 'react';
-import {products} from './products'
+import React, { useContext } from 'react';
 import './Products.css'
 import {
     MDBCard,
@@ -10,12 +9,18 @@ import {
     
   } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
+import UserContext from './UserContext';
 
-console.log(products);
+// console.log(products);
 
 
 export default function Products(){
+  const{products} = useContext(UserContext)
     
+    // const [productList,setProductList]=useState(products)
+    // console.log(productList);
+    
+
     return(
         <div className='allProducts'>
       <h1>All Products</h1>

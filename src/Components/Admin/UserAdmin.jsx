@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import UserContext from "../User/UserContext"
+import "./UserAdmin.css"
 
 export default function UserAdmin(){
     const {registeredUsers}= useContext(UserContext)

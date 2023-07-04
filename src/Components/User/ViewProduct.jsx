@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { products } from "./products";
+// import { products } from "./products";
 import "./ViewProducts.css";
 import React, { useContext, useState } from "react";
 import UserContext from "./UserContext";
@@ -16,7 +16,7 @@ import {
 } from "mdb-react-ui-kit";
 
 function ViewProduct({ handleAddtoCart, handleAddtoWishlist }) {
-  const { loginStatus, setLoginStatus } = useContext(UserContext);
+  const { loginStatus, setLoginStatus,products } = useContext(UserContext);
 
   const { productId } = useParams();
   const parsedProductId = parseInt(productId, 10);
