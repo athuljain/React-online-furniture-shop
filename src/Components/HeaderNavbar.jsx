@@ -14,9 +14,13 @@ import Badge from "react-bootstrap/Badge";
 
 
 function HeaderNavbar({ cartItems }) {
-  const { loginStatus } = useContext(UserContext);
+  const { loginStatus,setLoginStatus } = useContext(UserContext);
 
   const [searchInput, setSearchInput] = useState("");
+
+  const handleLogout=()=>{
+    setLoginStatus("logout")
+  }
 
   function handleSearch() {
     if (searchInput.toLowerCase().includes("sofa")) {
@@ -61,7 +65,7 @@ function HeaderNavbar({ cartItems }) {
 
           <div className="right-section">
             {loginStatus === "success" ? (
-              <Link className="login-logo" to="/register">
+              <Link className="login-logo" to="/" onClick={handleLogout}>
                 <IoMdLogOut />
               </Link>
             ) : (

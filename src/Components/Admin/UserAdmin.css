@@ -19,9 +19,13 @@
   .user-admin-container p {
     margin: 0;
     padding: 5px 0;
+    color: black;
   }
   
   .user-admin-container p:first-child {
     font-weight: bold;
+    color: black;
   }
-  
+  .user-p{
+    color: black;
+  }

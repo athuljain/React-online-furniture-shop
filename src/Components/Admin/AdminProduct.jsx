@@ -39,12 +39,12 @@ console.log("hello");
   return (
     <div className="admin-product">
       <div>
-        <Button onClick={handleAddProduct} >Add Product
+        <Button className="addproduct" onClick={handleAddProduct} >Add Product
           
         </Button>
       </div>
       {products.map((product) => (
-        <div key={product.id}>
+        <div className="products-container" key={product.id}>
           <h3>{product.title}</h3>
           <Image src={product.image} alt={product.title} />
           <p>Category: {product.category}</p>

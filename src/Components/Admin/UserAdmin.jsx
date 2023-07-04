@@ -10,9 +10,9 @@ export default function UserAdmin(){
             <div>
                 {registeredUsers.map((user)=>(
                     <div key={user.email}>
-                    <p>Name: {user.name}</p>
-                    <p>Phone: {user.phone}</p>
-                    <p>Email: {user.email}</p>
+                    <p className="user-p">Name: {user.name}</p>
+                    <p className="user-p">Phone: {user.phone}</p>
+                    <p className="user-p">Email: {user.email}</p>
                   </div>
                 )
 

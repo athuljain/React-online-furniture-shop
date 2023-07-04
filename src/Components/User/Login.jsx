@@ -26,6 +26,7 @@ export default function Login() {
     } else {
       setLoginStatus("failure");
     }
+    console.log(setLoginStatus);
   };
 
   useEffect(() => {
