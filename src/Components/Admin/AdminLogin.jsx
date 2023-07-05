@@ -12,7 +12,7 @@ export default function AdminLogin() {
   
     const handleLogin = () => {
       if (username === 'admin' && password === 'admin123') {
-        // If the username and password are correct, navigate to the /admin route
+       
         navigate("/admin")
       } else {
         

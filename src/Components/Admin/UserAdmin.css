@@ -2,6 +2,7 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
+    margin-top: -650px;
   }
   
   .user-admin-container h1 {
@@ -14,6 +15,7 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    
   }
   
   .user-admin-container p {

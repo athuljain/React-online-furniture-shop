@@ -36,7 +36,7 @@ export default function AdminEdit() {
 
   return (
     <div className="edit-product-container">
-      <h3>Edit Product</h3>
+      <h3 className="heading-edit">Edit Product</h3>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="title">
           <Form.Label>Title</Form.Label>
