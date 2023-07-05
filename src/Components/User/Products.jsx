@@ -16,6 +16,7 @@ import UserContext from './UserContext';
 
 export default function Products(){
   const{products} = useContext(UserContext)
+  console.log(products);
     
     // const [productList,setProductList]=useState(products)
     // console.log(productList);

@@ -12,19 +12,18 @@ import {
 import UserContext from "./UserContext";
 export default function Table() {
   const {products} = useContext(UserContext)
-  const [tableProducts,setTableProducts]=useState([])
+  //const [tableProducts,setTableProducts]=useState([])
 
-useState(()=>{
+
   const filteredProducts=products.filter((product)=> product.category==="Table")
-  setTableProducts(filteredProducts)
-},[])
+ 
 
   
   return (
     <div className="Table-Products">
       <h1>Table</h1>
       <div className="Table-productsList">
-        {tableProducts.map((product) => (
+        {filteredProducts.map((product) => (
           <Link
             to={`/products/${product.id}`}
             key={product.id}

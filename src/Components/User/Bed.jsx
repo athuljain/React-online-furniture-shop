@@ -11,20 +11,21 @@ import {
 } from "mdb-react-ui-kit";
 import UserContext from "./UserContext";
 export default function Bed() {
-  const {products} = useContext(UserContext)
+  const {products,setProducts} = useContext(UserContext)
   console.log(products);
-  const [bedProducts,setBedProducts]=useState([])
+  //const [bedProducts,setBedProducts]=useState([])
 
-  useState(() => {
+  // useState(() => {
     const filteredProducts = products.filter((product) => product.category === "Bed");
-    setBedProducts(filteredProducts);
-  }, []);
+
+  //  setProducts(filteredProducts);
+  // }, []);
 
   return (
     <div className="Bed-Products">
       <h1>Bed</h1>
       <div className="Bed-productsList">
-        {bedProducts.map((product) => (
+        {filteredProducts.map((product) => (
           <Link
             to={`/products/${product.id}`}
             key={product.id}

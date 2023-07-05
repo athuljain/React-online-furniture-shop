@@ -28,7 +28,7 @@ export default function AdminAddProduct({ handleAddProduct }) {
     const updatedProducts = [...products, newProduct];
     setProducts(updatedProducts);
     console.log(updatedProducts);
-   // console.log("adminadd",product);
+   
     setNewProduct({
       id: "",
       title: "",

@@ -11,22 +11,21 @@ import {
 } from "mdb-react-ui-kit";
 import UserContext from "./UserContext";
 export default function Sofa() {
-  const {products} = useContext(UserContext)
+  const {products,setProducts} = useContext(UserContext)
 
-  const [sofaProducts,setSofaProducts]=useState([])
+  //const [sofaProducts,setSofaProducts]=useState([])
 
 
 
-  useState(() => {
+  
     const filteredProducts = products.filter((product) => product.category === 'Sofa');
-    setSofaProducts(filteredProducts);
-  }, []);
+   
 
   return (
     <div className="Sofa-Products">
       <h1>Sofa</h1>
       <div className="Sofa-productsList">
-        {sofaProducts.map((product) => (
+        {filteredProducts.map((product) => (
           <Link
             to={`/products/${product.id}`}
             key={product.id}

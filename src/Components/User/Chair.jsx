@@ -16,10 +16,10 @@ export default function Chair(){
   const {products,setProducts} = useContext(UserContext)
     // const [chairProducts,setChairProducts]=useState([])
 
-    useState(() => {
+    
         const filteredProducts = products.filter((product) => product.category === 'Chair');
-        setProducts(filteredProducts);
-      }, []);
+        
+     
 
     return(
         <div className="Chair-Products">
@@ -27,7 +27,7 @@ export default function Chair(){
                 <h1>Chair</h1>
             </div>
             <div className="Chair-ProductsList">
-                {products.map((product)=>(
+                {filteredProducts.map((product)=>(
                  <Link to={`/products/${product.id}`} key={product.id} className='linkWithoutDecoration' >
               <div className='Chair-cardproduct'>
             <MDBCardImage className='Chair-ProductsImg' src={product.image} position='top' alt='...' />

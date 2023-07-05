@@ -34,6 +34,7 @@ export default function Login() {
   }, []);
 
   return (
+    <div>
     <div className="login-container">
       <form className="login-form">
         <h3 className="login-header">Login</h3>
@@ -82,6 +83,7 @@ export default function Login() {
           Login failed. Please try again.
         </p>
       )}
+    </div>
     </div>
   );
 }
