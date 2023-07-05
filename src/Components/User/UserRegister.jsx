@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef, useEffect } from "react";
+import React, { useState, useContext, useRef,  } from "react";
 import { useNavigate } from "react-router-dom";
 import UserContext from "./UserContext";
 import './UserRegister.css'
@@ -6,7 +6,7 @@ import './UserRegister.css'
 export default function UserRegister() {
   const inputRef = useRef(null);
 
-  const {addUser,setLoginStatus}=useContext(UserContext)
+  const {addUser,}=useContext(UserContext)
 
   // useEffect(()=>{
   //     inputRef.current.focus()

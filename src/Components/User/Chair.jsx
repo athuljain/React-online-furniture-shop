@@ -30,7 +30,7 @@ export default function Chair(){
                 {filteredProducts.map((product)=>(
                  <Link to={`/products/${product.id}`} key={product.id} className='linkWithoutDecoration' >
               <div className='Chair-cardproduct'>
-            <MDBCardImage className='Chair-ProductsImg' src={product.image} position='top' alt='...' />
+            <MDBCardImage className='Chair-ProductsImg' src={product.image} position='top' alt='' />
             <MDBCardBody>
               <MDBCardTitle className='Chair-ProductsTitle'>{product.title}</MDBCardTitle>
               <MDBCardText className='Chair-ProductsCategory'>{product.category}</MDBCardText>

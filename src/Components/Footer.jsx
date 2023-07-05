@@ -141,7 +141,7 @@ export default function Footer() {
                       src={
                         "https://ii2.pepperfry.com/media/wysiwyg/banners/web22-footer-apple-appstore-logo_2x.png"
                       }
-                    />{" "}
+                      alt=""  />{" "}
                   </Link>{" "}
                   <br />
                   <Link className="linkWithoutDecoration" to="/">
@@ -150,8 +150,8 @@ export default function Footer() {
                       className="App-img"
                       src={
                         "https://ii2.pepperfry.com/media/wysiwyg/banners/web22-footer-google-playstore-logo_2x.png"
-                      }
-                    />{" "}
+                    }
+                    alt="" />{" "}
                   </Link>{" "}
                   <br />
                 </div>
@@ -227,31 +227,31 @@ export default function Footer() {
             </div>
             <Link className="linkWithoutDecoration" to="/">
               {" "}
-              <img src="https://ii3.pepperfry.com/assets/w23-pf-visa.jpg" />{" "}
+              <img src="https://ii3.pepperfry.com/assets/w23-pf-visa.jpg"  alt=""/>{" "}
             </Link>
             <Link className="linkWithoutDecoration" to="/">
               {" "}
-              <img src="https://ii2.pepperfry.com/assets/w23-pf-master-card.jpg" />{" "}
+              <img src="https://ii2.pepperfry.com/assets/w23-pf-master-card.jpg" alt="" />{" "}
             </Link>
             <Link className="linkWithoutDecoration" to="/">
               {" "}
-              <img src="https://ii1.pepperfry.com/assets/w23-pf-maestro.jpg" />{" "}
+              <img src="https://ii1.pepperfry.com/assets/w23-pf-maestro.jpg" alt="" />{" "}
             </Link>
             <Link className="linkWithoutDecoration" to="/">
               {" "}
-              <img src="https://ii3.pepperfry.com/assets/w23-pf-rupay.jpg" />{" "}
+              <img src="https://ii3.pepperfry.com/assets/w23-pf-rupay.jpg" alt="" />{" "}
             </Link>
             <Link className="linkWithoutDecoration" to="/">
               {" "}
-              <img src="https://ii3.pepperfry.com/assets/w23-pf-dinners-club.jpg" />{" "}
+              <img src="https://ii3.pepperfry.com/assets/w23-pf-dinners-club.jpg" alt="" />{" "}
             </Link>
             <Link className="linkWithoutDecoration" to="/">
               {" "}
-              <img src="https://ii2.pepperfry.com/assets/w23-pf-wallet.jpg" />{" "}
+              <img src="https://ii2.pepperfry.com/assets/w23-pf-wallet.jpg" alt="" />{" "}
             </Link>
             <Link className="linkWithoutDecoration" to="/">
               {" "}
-              <img src="https://ii1.pepperfry.com/assets/w23-pf-net-banking.jpg" />{" "}
+              <img src="https://ii1.pepperfry.com/assets/w23-pf-net-banking.jpg" alt="" />{" "}
             </Link>
           </div>
           <div className="ThirdSessionRight">
@@ -260,27 +260,27 @@ export default function Footer() {
             </div>
             <Link className="linkWithoutDecoration" to="/">
               {" "}
-              <img src="https://ii1.pepperfry.com/assets/w23-pf-social-insta.png" />{" "}
+              <img src="https://ii1.pepperfry.com/assets/w23-pf-social-insta.png" alt="" />{" "}
             </Link>
             <Link className="linkWithoutDecoration" to="/">
               {" "}
-              <img src="https://ii3.pepperfry.com/assets/w23-pf-social-fb.png" />{" "}
+              <img src="https://ii3.pepperfry.com/assets/w23-pf-social-fb.png" alt="" />{" "}
             </Link>
             <Link className="linkWithoutDecoration" to="/">
               {" "}
-              <img src="https://ii3.pepperfry.com/assets/w23-pf-social-pinterest.png" />{" "}
+              <img src="https://ii3.pepperfry.com/assets/w23-pf-social-pinterest.png" alt="" />{" "}
             </Link>
             <Link className="linkWithoutDecoration" to="/">
               {" "}
-              <img src="https://ii2.pepperfry.com/assets/w23-pf-social-linkedin.png" />{" "}
+              <img src="https://ii2.pepperfry.com/assets/w23-pf-social-linkedin.png" alt="" />{" "}
             </Link>
             <Link className="linkWithoutDecoration" to="/">
               {" "}
-              <img src="https://ii3.pepperfry.com/assets/w23-pf-social-youtube.png" />{" "}
+              <img src="https://ii3.pepperfry.com/assets/w23-pf-social-youtube.png" alt="" />{" "}
             </Link>
             <Link className="linkWithoutDecoration" to="/">
               {" "}
-              <img src="https://ii1.pepperfry.com/assets/w23-pf-social-twitter.png" />{" "}
+              <img src="https://ii1.pepperfry.com/assets/w23-pf-social-twitter.png" alt="" />{" "}
             </Link>
           </div>
         </div>

@@ -36,7 +36,7 @@ export default function Sofa() {
                 className="Sofa-ProductsImg"
                 src={product.image}
                 position="top"
-                alt="..."
+                alt=""
               />
               <MDBCardBody>
                 <MDBCardTitle className="Sofa-ProductsTitle">

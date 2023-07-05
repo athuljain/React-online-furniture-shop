@@ -34,7 +34,7 @@ export default function Table() {
                 className="Table-ProductsImg"
                 src={product.image}
                 position="top"
-                alt="..."
+                alt=""
               />
               <MDBCardBody>
                 <MDBCardTitle className="Table-ProductsTitle">

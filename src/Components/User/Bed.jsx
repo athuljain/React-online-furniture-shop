@@ -36,7 +36,7 @@ export default function Bed() {
                 className="Bed-ProductsImg"
                 src={product.image}
                 position="top"
-                alt="..."
+                alt=""
               />
               <MDBCardBody>
                 <MDBCardTitle className="Bed-ProductsTitle">

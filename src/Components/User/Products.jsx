@@ -30,7 +30,7 @@ export default function Products(){
         <Link to={`/products/${product.id}`} key={product.id} className='linkWithoutDecoration' >
         <MDBCard >
             <div className='cardproduct'>
-          <MDBCardImage className='allProductsImg' src={product.image} position='top' alt='...' />
+          <MDBCardImage className='allProductsImg' src={product.image} position='top' alt='' />
           <MDBCardBody>
             <MDBCardTitle className='allProductsTitle'>{product.title}</MDBCardTitle>
             <MDBCardText className='allProductsCategory'>{product.category}</MDBCardText>
