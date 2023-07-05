@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext,  } from "react";
 import "./Bed.css";
 // import { products } from "./products";
 import "./Products.css";
@@ -11,7 +11,7 @@ import {
 } from "mdb-react-ui-kit";
 import UserContext from "./UserContext";
 export default function Bed() {
-  const {products,setProducts} = useContext(UserContext)
+  const {products} = useContext(UserContext)
   console.log(products);
   //const [bedProducts,setBedProducts]=useState([])
 
