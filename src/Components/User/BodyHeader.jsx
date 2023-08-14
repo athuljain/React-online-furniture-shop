@@ -77,7 +77,10 @@ export default function BodyHeader() {
             </Link>
           </div>
           <div className="col-sm-6 col-md-4">
-            <Link to="/products" className="imageContainer linkWithoutDecoration">
+            <Link
+              to="/products"
+              className="imageContainer linkWithoutDecoration"
+            >
               <img src={PetFurnitureImg} alt="" />
               <p>Pet Furniture</p>
             </Link>
@@ -89,7 +92,10 @@ export default function BodyHeader() {
             </Link>
           </div>
           <div className="col-sm-6 col-md-4">
-            <Link to="/products" className="imageContainer linkWithoutDecoration">
+            <Link
+              to="/products"
+              className="imageContainer linkWithoutDecoration"
+            >
               <img src={OfficeFurImg} alt="" />
               <p>Office Furniture</p>
             </Link>
@@ -109,21 +115,30 @@ export default function BodyHeader() {
         </div>
         <div className="row BestSellCategory">
           <div className="col-sm-6 col-md-3">
-            <Link to="/bed" className="BestSellimageContainer linkWithoutDecoration">
+            <Link
+              to="/bed"
+              className="BestSellimageContainer linkWithoutDecoration"
+            >
               <img src={BestSellBed} alt="" />
               <h4>Beds with Box Storage</h4>
               <p className="BestSellP">300 + Options, Starting ₹10710</p>
             </Link>
           </div>
           <div className="col-sm-6 col-md-3">
-            <Link to="/table" className="BestSellimageContainer linkWithoutDecoration">
+            <Link
+              to="/table"
+              className="BestSellimageContainer linkWithoutDecoration"
+            >
               <img src={BestSellTable} alt="" />
               <h4>Modern Writing Tables</h4>
               <p className="BestSellP">180+ Options, Starting ₹2799</p>
             </Link>
           </div>
           <div className="col-sm-6 col-md-3">
-            <Link to="/chair" className="BestSellimageContainer linkWithoutDecoration">
+            <Link
+              to="/chair"
+              className="BestSellimageContainer linkWithoutDecoration"
+            >
               <img src={BestSellChair} alt="" />
               <h4>Ergonomic Chairs</h4>
               <p className="BestSellP">250+ Options, Starting ₹3799</p>

@@ -1,4 +1,4 @@
-import React, { useContext,  } from "react";
+import React, { useContext } from "react";
 import "./Bed.css";
 // import { products } from "./products";
 import "./Products.css";
@@ -11,12 +11,14 @@ import {
 } from "mdb-react-ui-kit";
 import UserContext from "./UserContext";
 export default function Bed() {
-  const {products} = useContext(UserContext)
+  const { products } = useContext(UserContext);
   console.log(products);
   //const [bedProducts,setBedProducts]=useState([])
 
   // useState(() => {
-    const filteredProducts = products.filter((product) => product.category === "Bed");
+  const filteredProducts = products.filter(
+    (product) => product.category === "Bed"
+  );
 
   //  setProducts(filteredProducts);
   // }, []);

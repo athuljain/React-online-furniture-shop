@@ -49,7 +49,7 @@ export default function Footer() {
                 <div className="footerList">
                   <Link className="linkWithoutDecoration" to="/">
                     {" "}
-                    Explore Gift Cards{" "}
+                    Explore Gift & Cards{" "}
                   </Link>{" "}
                   <br />
                   <Link className="linkWithoutDecoration" to="/">
