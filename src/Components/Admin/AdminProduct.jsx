@@ -11,17 +11,12 @@ const AdminProduct = () => {
  // console.warn(products);
   // const [productList,setProductList]=useState(products)
 // console.log(productList);
-console.log("hello");
-
-
+console.log("hello")
  const navigate=useNavigate()
-
-  
 
   const handleEdit = (productId) => {
   navigate(`/admin/edit/${productId}`)
-   
-  };
+   };
 
   const handleAddProduct=()=>{
   //   setProductList(products)
