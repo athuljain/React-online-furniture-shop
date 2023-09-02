@@ -72,15 +72,15 @@ export default function Login() {
         </div>
 
         <h6>
-          Don't have an account? <Link to="/register">Create</Link>
+          Don't have an Account? <Link to="/register">Create</Link>
         </h6>
       </form>
       {loginStatus === "success" && (
-        <p className="login-success">Login successful!</p>
+        <p className="login-success">Login Successful!</p>
       )}
       {loginStatus === "failure" && (
         <p className="login-failure" style={{ color: "red" }}>
-          Login failed. Please try again.
+          Login Failed. Please Try Again.
         </p>
       )}
     </div>

@@ -11,7 +11,7 @@ export default function Wishlist({ wishlistItems, removeFromWishList }) {
 
   return (
     <div className="WishList">
-      <h3 className="WishlistHeader">Wish List</h3>
+      <h3 className="WishlistHeader">Your Wish List</h3>
       {wishlistItems.length > 0 ? (
         <div>
           {wishlistItems.map((item) => (
@@ -33,11 +33,11 @@ export default function Wishlist({ wishlistItems, removeFromWishList }) {
             </div>
           ))}
           <div>
-            <button className="WishListBuyBtn"> Buy Now</button>
+            <button className="WishListBuyBtn">Buy Now !</button>
           </div>
         </div>
       ) : (
-        <p style={{ color: "black" }}>Your wishlist is empty.</p>
+        <p style={{ color: "black" }}>Your Wishlist is Empty.</p>
       )}
     </div>
   );

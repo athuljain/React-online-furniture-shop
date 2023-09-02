@@ -91,16 +91,16 @@ function HeaderNavbar({ cartItems }) {
         </div>
 
         <div className="navbar-second-line">
-          <a className="link-text" href="/">
+          <a className="link-text" href="/home">
             Find a Studio
           </a>
-          <a className="link-text" href="/">
+          <a className="link-text" href="/home">
             Track Your Order
           </a>
-          <a className="link-text" href="/">
+          <a className="link-text" href="/home">
             Buy in Bulk
           </a>
-          <a className="link-text" href="/">
+          <a className="link-text" href="/home">
             Contact Us
           </a>
         </div>

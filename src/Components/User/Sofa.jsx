@@ -23,7 +23,7 @@ export default function Sofa() {
 
   return (
     <div className="Sofa-Products">
-      <h1>Sofa</h1>
+      <h1>Sofa Products</h1>
       <div className="Sofa-productsList">
         {filteredProducts.map((product) => (
           <Link

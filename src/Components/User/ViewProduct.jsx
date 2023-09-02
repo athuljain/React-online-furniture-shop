@@ -37,11 +37,11 @@ function ViewProduct({ handleAddtoCart, handleAddtoWishlist }) {
     if (loginStatus === "success") {
       const isAlreadyInCart = handleAddtoCart(product);
       if (isAlreadyInCart) {
-        setAddToCartMessage(<Link to="/cart"> "Product already in cart"</Link>);
+        setAddToCartMessage(<Link to="/cart">"Product Already in Cart"</Link>);
 
         console.log("Product already in cart");
       } else {
-        setAddToCartMessage(<Link to="/cart">"Product added to cart "</Link>);
+        setAddToCartMessage(<Link to="/cart">"Product Added to Cart "</Link>);
 
         console.log("Product added to cart", product);
       }
@@ -54,13 +54,13 @@ function ViewProduct({ handleAddtoCart, handleAddtoWishlist }) {
       const isAlreadyInWishList = handleAddtoWishlist(product);
       if (isAlreadyInWishList) {
         setAddToCartWishListMessage(
-          <Link to="/wishlist">"Product alredy in wishlist "</Link>
+          <Link to="/wishlist">"Product Alredy in Wishlist "</Link>
         );
 
         console.log("Product already in wishlist");
       } else {
         setAddToCartWishListMessage(
-          <Link to="/wishlist">"Product added to Wishlist "</Link>
+          <Link to="/wishlist">"Product Added to Wishlist "</Link>
         );
         console.log("Product added to wishlist", product);
       }

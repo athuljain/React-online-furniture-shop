@@ -43,7 +43,7 @@ export default function Cart({
 
   return (
     <div className="Cart">
-      <h1>Cart</h1>
+      <h1>Your Cart</h1>
       {cartItems.length > 0 ? (
         <div>
           {cartItems.map((item, index) => (
@@ -88,11 +88,11 @@ export default function Cart({
           ))}
           <div>
             <h3 style={{ color: "black" }}>Total Amout : {CartTotal()}</h3>
-            <button className="CartTotal"> Buy Now</button>
+            <button className="CartTotal"> Buy Now !</button>
           </div>
         </div>
       ) : (
-        <p style={{ color: "black" }}>Your cart is empty.</p>
+        <p style={{ color: "black" }}>Your Cart is Empty.</p>
       )}
     </div>
   );

@@ -21,7 +21,7 @@ export default function Chair() {
   return (
     <div className="Chair-Products">
       <div>
-        <h1>Chair</h1>
+        <h1>Chair Products</h1>
       </div>
       <div className="Chair-ProductsList">
         {filteredProducts.map((product) => (

@@ -25,7 +25,7 @@ export default function Bed() {
 
   return (
     <div className="Bed-Products">
-      <h1>Bed</h1>
+      <h1>Bed Products</h1>
       <div className="Bed-productsList">
         {filteredProducts.map((product) => (
           <Link

@@ -21,7 +21,7 @@ export default function Table() {
   
   return (
     <div className="Table-Products">
-      <h1>Table</h1>
+      <h1>Table Products</h1>
       <div className="Table-productsList">
         {filteredProducts.map((product) => (
           <Link

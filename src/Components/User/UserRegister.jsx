@@ -71,7 +71,7 @@ export default function UserRegister() {
         />
         <br />
         <button className="submit-btn" onClick={handleButtonClick} type="submit">
-          Submit
+          Submit 
         </button>
       </div>
     </div>

@@ -22,22 +22,22 @@ export default function Footer() {
               <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
                 <h4 className="text-uppercase fw-bold mb-4">Corporate</h4>
                 <div className="footerList">
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     About Us{" "}
                   </Link>{" "}
                   <br />
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Corporate Governance{" "}
                   </Link>{" "}
                   <br />
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     AJFurniture in the News{" "}
                   </Link>{" "}
                   <br />
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Careers
                   </Link>
@@ -47,27 +47,27 @@ export default function Footer() {
               <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
                 <h4 className="text-uppercase fw-bold mb-4">Useful Links</h4>
                 <div className="footerList">
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Explore Gift & Cards{" "}
                   </Link>{" "}
                   <br />
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Buy in Bulk{" "}
                   </Link>{" "}
                   <br />
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Discover Our Brands{" "}
                   </Link>{" "}
                   <br />
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Check Out Bonhomie,Our Blog
                   </Link>{" "}
                   <br />
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Find a Studio{" "}
                   </Link>
@@ -77,32 +77,32 @@ export default function Footer() {
               <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
                 <h4 className="text-uppercase fw-bold mb-4">Partner With Us</h4>
                 <div className="footerList">
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Sell on AJ Furniture{" "}
                   </Link>{" "}
                   <br />
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Become a Feanchisee{" "}
                   </Link>{" "}
                   <br />
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Become Our Channel Partner{" "}
                   </Link>{" "}
                   <br />
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Become Our Pep Homie{" "}
                   </Link>{" "}
                   <br />
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Our Marketplace Policies{" "}
                   </Link>{" "}
                   <br />
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Merchant Dashboard Login
                   </Link>
@@ -112,17 +112,17 @@ export default function Footer() {
               <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
                 <h4 className="text-uppercase fw-bold mb-4">Need Help?</h4>
                 <div className="footerList">
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     FAQs{" "}
                   </Link>{" "}
                   <br />
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Policies
                   </Link>{" "}
                   <br />
-                  <Link className="linkWithoutDecoration" to="/">
+                  <Link className="linkWithoutDecoration" to="/home">
                     {" "}
                     Contact Us
                   </Link>
