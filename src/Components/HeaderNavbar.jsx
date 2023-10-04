@@ -13,6 +13,7 @@ import Badge from "react-bootstrap/Badge";
 
 
 
+
 function HeaderNavbar({ cartItems }) {
   const { loginStatus,setLoginStatus } = useContext(UserContext);
 

@@ -19,6 +19,7 @@ export default function Bed() {
   const filteredProducts = products.filter(
     (product) => product.category === "Bed"
   );
+  console.log(filteredProducts);
 
   //  setProducts(filteredProducts);
   // }, []);
@@ -31,7 +32,8 @@ export default function Bed() {
           <Link
             to={`/products/${product.id}`}
             key={product.id}
-            className="linkWithoutDecoration"
+            className="
+            "
           >
             <div className="Bed-cardproduct">
               <MDBCardImage
