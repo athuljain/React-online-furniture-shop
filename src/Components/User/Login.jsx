@@ -6,6 +6,10 @@ import "./Login.css";
 import UserContext from "./UserContext";
 
 export default function Login() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const inputRef = useRef(null);
 
   const navigate = useNavigate();

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Cart.css";
 import { Link } from "react-router-dom";
 import { CiCircleRemove } from "react-icons/ci";
@@ -8,6 +8,11 @@ export default function Cart({
   handleAddToCart,
   removeFromCart,
 }) {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [quantities, setQuantities] = useState(cartItems.map(() => 1));
 
   const handleRemoveFromCart = (itemId) => {

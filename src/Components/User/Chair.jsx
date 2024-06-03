@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Chair.css";
 // import {products} from './products'
 import { Link } from "react-router-dom";
@@ -11,6 +11,11 @@ import {
 } from "mdb-react-ui-kit";
 import UserContext from "./UserContext";
 export default function Chair() {
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { products } = useContext(UserContext);
   // const [chairProducts,setChairProducts]=useState([])
 

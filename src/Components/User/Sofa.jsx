@@ -1,4 +1,4 @@
-import React, { useContext,  } from "react";
+import React, { useContext, useEffect,  } from "react";
 import "./Sofa.css";
 
 import "./Products.css";
@@ -17,7 +17,10 @@ export default function Sofa() {
 
 
 
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
     const filteredProducts = products.filter((product) => product.category === 'Sofa');
    
 

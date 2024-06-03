@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./WishList.css";
 
 import { CiCircleRemove } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 export default function Wishlist({ wishlistItems, removeFromWishList }) {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleRemoveFromWishList = (itemId) => {
     removeFromWishList(itemId);
   };

@@ -1,9 +1,15 @@
-import React, { useState, useContext, useRef,  } from "react";
+import React, { useState, useContext, useRef, useEffect,  } from "react";
 import { useNavigate } from "react-router-dom";
 import UserContext from "./UserContext";
 import './UserRegister.css'
 
 export default function UserRegister() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   const inputRef = useRef(null);
 
   const {addUser,}=useContext(UserContext)

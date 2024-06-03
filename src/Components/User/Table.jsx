@@ -1,4 +1,4 @@
-import React, { useContext,  } from "react";
+import React, { useContext, useEffect,  } from "react";
 import "./Table.css";
 // import { products } from "./products";
 import "./Products.css";
@@ -11,6 +11,12 @@ import {
 } from "mdb-react-ui-kit";
 import UserContext from "./UserContext";
 export default function Table() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   const {products} = useContext(UserContext)
   //const [tableProducts,setTableProducts]=useState([])
 

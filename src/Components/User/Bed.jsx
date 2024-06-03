@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Bed.css";
 // import { products } from "./products";
 import "./Products.css";
@@ -11,6 +11,11 @@ import {
 } from "mdb-react-ui-kit";
 import UserContext from "./UserContext";
 export default function Bed() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const { products } = useContext(UserContext);
   console.log(products);
   //const [bedProducts,setBedProducts]=useState([])
